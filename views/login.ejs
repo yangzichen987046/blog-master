@@ -1,0 +1,105 @@
+<%-include header %>
+<!--<form method="post">-->
+	<!--<div class="form-group">-->
+		<!--用户名: <input class="form-info" type="text" name="name" />-->
+	<!--</div>-->
+	<!--<div class="form-group">-->
+		<!--登录密码:<input class="form-info" type="password" name="password" />-->
+	<!--</div>-->
+	<!--<div class="form-control">-->
+		<!--<input type="submit" value="登录" />-->
+		<!--<a href="/login/github/" >github登录</a>-->
+	<!--</div>-->
+<!--</form>-->
+
+<div class="container">
+
+	<div class="login-page">
+		<div class="logo"><img src="images/img_logo-25ff4bee2e56411470b83c636a7a0dad.png" alt="Img logo"></div>
+		<h4 class="title">
+              <span>
+                <a class="active" data-pjax="true" href="/login">登录</a>
+                <b>·</b>
+                <a class="" data-pjax="true" href="/reg">注册</a>
+              </span>
+		</h4>
+		<div id="pjax-container">
+
+			<div class="sign-in">
+				<form class="form-horizontal" method="post"><input name="utf8" type="hidden" >
+					<input type="hidden" name="authenticity_token" value="Xu8uKrArtiLiHMyp2sCBW8/FxyL+FtMYC6U8C3PleAd6vWfUV4IxhAkfGR3Merbg9RpZS8ZMNiyk4O0d/z0hPw==">
+
+					<p id="signin_errors" class="signin_error hide"></p>
+
+
+
+					<div class="input-prepend domestic ">
+						<span class="add-on"><i class="fa fa-user"></i></span>
+						<input type="text" name="name" id="sign_in_name" value="" class="span2" placeholder="手机号码/电子邮件" />
+					</div>
+
+					<div class="input-prepend password ">
+						<span class="add-on"><i class="fa fa-unlock-alt"></i></span>
+						<input type="password" name="password" id="sign_in_password" class="span2" placeholder="密码" />
+					</div>
+
+
+
+
+					<button class="ladda-button submit-button" type="submit" data-color="blue">
+						<span class="ladda-label">登 录</span>
+					</button>
+
+					<div class="control-group text-left">
+						<input type="checkbox" name="sign_in[remember_me]" id="sign_in_remember_me" value="true" checked="checked" /> 记住我
+						<a  href="/users/password/new">忘记密码</a>
+					</div>
+
+					<div ><a href="javascript:void(null)" class="switch_sign_in_name">海外手机登录</a></div>
+
+				</form>
+			</div>
+
+		</div>
+		<div class="login-sns">
+			<p>您还可以通过以下方式直接登录</p>
+			<ul class="login-sns">
+				<li class="weibo">
+					<a href="/users/auth/weibo"><i class="fa fa-weibo"></i></a>
+				</li>
+				<li class="qq">
+					<a href="/users/auth/qq_connect"><i class="fa fa-qq"></i></a>
+				</li>
+				<li class="douban">
+					<a href="/users/auth/douban"><i class="fa fa-douban"></i></a>
+				</li>
+				<li class="google">
+					<a href="/users/auth/google_oauth2"><i class="fa fa-google-plus"></i></a>
+				</li>
+				<li class="wechat">
+					<a href="/users/auth/wechat"><i class="fa fa-wechat"></i></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%-include footer %>

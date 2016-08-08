@@ -1,0 +1,279 @@
+<%- include header %>
+
+<div class="nav_left">
+    <div class="nav_left_top">
+
+        <a class="logo" href="/"><b>简</b></a>
+
+        <div class="tip">
+            <i class="fa fa-th"></i>
+        </div>
+        <div class="tip">
+            <i class="fa fa-users"></i>
+        </div>
+        <div class="tip">
+            <i class="fa fa-pencil"></i>
+        </div>
+        <div class="tip">
+            <i class="fa fa-mobile"></i>
+        </div>
+    </div>
+    <div class="nav_left_bottom">
+        <div class="tip">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="tip">
+            <i class="fa fa-bookmark"></i>
+        </div>
+        <div class="tip">
+            <i id="notify-icon" class="fa fa-bell"></i>
+        </div>
+        <div class="tip">
+            <i id="chat-message-icon" class="fa fa-envelope"></i>
+        </div>
+        <div class="tip">
+            <i class="fa fa-font"></i>
+        </div>
+    </div>
+</div>
+<div class="nav_right">
+    <div class="writer-nav-header"></div>
+    <div class="aside">
+        <div class="new-notebook">
+            <a href="javascript:void(0)" class="create-notebook win-text"> +新建文集 <img src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" class="hide loader-tiny create-notebook-loader" style="display: none;"> </a>
+            <div class="new-notebook-form hide" style="display: block;">
+                <form class="create-notebook-form"  method="post">
+                    <input placeholder="请输入文集名..." type="text" name="notebook" class="input-medium notebook-input">
+                    <a href="javascript:void(0)" class="btn cancel" data-action="cancel-create-notebook"> 取消 </a>
+                    <input class="btn btn-mainRed submit" name="commit" type="submit" value="提交" data-action="submit">
+                </form>
+            </div>
+        </div>
+
+        <ul class="nav nav-list notebooks ui-sortable">
+            <!--<li class="one-notebook item active" data-cid='c-1'> -->
+                <!--<a href="/post/c-1" class="notebook-name"> -->
+                    <!--<i class="icon icon-notebook"></i> -->
+                    <!--<span>111</span> -->
+                <!--</a> -->
+                <!--<a class="edit-notebook dropdown-toggle"> -->
+                    <!--<i class="fa fa-gear"></i> -->
+                <!--</a> -->
+            <!--</li>-->
+            <!--<li class="one-notebook item" data-cid='c-2'>-->
+                <!--<a href="/post/c-2" class="notebook-name">-->
+                    <!--<i class="icon icon-notebook"></i>-->
+                    <!--<span>222</span>-->
+                <!--</a>-->
+                <!--<a class="edit-notebook dropdown-toggle">-->
+                    <!--<i class="fa fa-gear"></i>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="one-notebook item" data-cid='c-3'>-->
+                <!--<a href="/post/c-3" class="notebook-name">-->
+                    <!--<i class="icon icon-notebook"></i>-->
+                    <!--<span>333</span>-->
+                <!--</a>-->
+                <!--<a class="edit-notebook dropdown-toggle">-->
+                    <!--<i class="fa fa-gear"></i>-->
+                <!--</a>-->
+            <!--</li>-->
+            <!--<li class="one-notebook item" data-cid='c-4'>-->
+                <!--<a href="/post/c-4" class="notebook-name">-->
+                    <!--<i class="icon icon-notebook"></i>-->
+                    <!--<span>444</span>-->
+                <!--</a>-->
+                <!--<a class="edit-notebook dropdown-toggle">-->
+                    <!--<i class="fa fa-gear"></i>-->
+                <!--</a>-->
+            <!--</li>-->
+        </ul>
+<!--<script>-->
+    <!--var arrData  = new Array()-->
+    <!--var azzData  = new Array()-->
+    <!--<% post_all.forEach(function(post_all, index) { %>-->
+    <!--var ss="<%= post_all.notebook_name %>"-->
+    <!--var zz="<%= post_all.notebook_id %>"-->
+    <!--arrData .push(ss)-->
+    <!--azzData .push(zz)-->
+    <!--<%})%>-->
+<!--//console.log(arrData,azzData)-->
+
+
+    <!--function unique(arr) {-->
+        <!--var result = [], hash = {};-->
+        <!--for (var i = 0, elem; (elem = arr[i]) != null; i++) {-->
+            <!--if (!hash[elem]) {-->
+                <!--result.push(elem);-->
+                <!--hash[elem] = true;-->
+            <!--}-->
+        <!--}-->
+        <!--return result;-->
+
+    <!--}-->
+
+
+
+    <!--var op=unique(arrData )-->
+    <!--var oz=unique(azzData )-->
+
+    <!--var ii="<%= posts[0].notebook_name%>"-->
+
+    <!--for (var i=0;i<op.length;i++)-->
+    <!--{-->
+        <!--if(ii==op[i]){-->
+            <!--$(".nav.nav-list.notebooks").append('<li class="one-notebook item active" data-cid='+op[i]+'> <a href="/post/'+op[i]+'" class="notebook-name"> <i class="icon icon-notebook"></i> <span>'+oz[i]+'</span> </a> <a class="edit-notebook dropdown-toggle"> <i class="fa fa-gear"></i> </a> </li>')-->
+
+        <!--}else{-->
+            <!--$(".nav.nav-list.notebooks").append('<li class="one-notebook item " data-cid='+op[i]+'> <a href="/post/'+op[i]+'" class="notebook-name"> <i class="icon icon-notebook"></i> <span>'+oz[i]+'</span> </a> <a class="edit-notebook dropdown-toggle"> <i class="fa fa-gear"></i> </a> </li>')-->
+
+        <!--}-->
+
+    <!--}-->
+
+<!--</script>-->
+        <div class="commercial">
+
+
+
+            <p>属于写作者的文集, 一个简洁而优雅的环境让你专注于书写。</p>   <div class="btn text-center" href="javascript:void(null)" data-action="recycle-mode">回收站</div></div>
+    </div>
+    <div class="middle">
+        <div class="notes_list">
+            <div id="new-note"> <a href="javascript:void(0)" data-action="create-note" class="new-note-link"> <i class="icon fa fa-pencil"></i> <span class="win-text">+新建文章 <img src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" class="hide cnlt loader-tiny"></span> </a> </div>
+
+            <ul class="nav nav-list notes ui-sortable">
+                <% posts.forEach(function(post, index) { %>
+                <li class="one-note" data-model="note" data-cid="c-7">
+                    <i class="icon icon-note note-icon stop-share"></i>
+                    <p class="abbreviate"></p>
+                    <p class="wordage win-text">字数: <%= post.length %></p>
+                    <a href="/edit/<%= post.notebook_name %>/<%= post.name %>/<%= post.time.day %>/<%= post.title %>" data-type="edit" class="note-link title"> <%= post.title %></a>
+                    <a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-gear"></i>
+                    </a>
+                    <ul class="dropdown-menu arrow-top">
+                        <li> <a href="javascript:void(0)" class="share-link" data-action="open-share-note">
+                                <i class="fa fa-share"></i> 直接发布
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li> <a href="javascript:void(0)" data-action="open-move-note"> <i class="fa fa-folder-open"></i> 移动文章 </a> </li>
+                        <li> <a href="javascript:void(0)" data-action="trigger-history-mode"> <i class="fa fa-clock-o"></i> 历史版本 </a></li>
+                        <li class="divider"></li>
+                        <li> <a href="javascript:void(0)" data-action="delete-note"> <i class="fa fa-trash-o"></i> 删除文章 </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <% }) %>
+
+
+                <!--<li class="one-note active" data-model="note" data-cid="c-7">-->
+                    <!--<i class="icon icon-note note-icon stop-share"></i>-->
+                    <!--<p class="abbreviate"></p>-->
+                    <!--<p class="wordage win-text">字数: 0</p>-->
+                    <!--<a href="javascript:void(0)" data-type="edit" class="note-link title">无标题文章</a>-->
+                    <!--<a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">-->
+                        <!--<i class="fa fa-gear"></i>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu arrow-top">-->
+                        <!--<li> <a href="javascript:void(0)" class="share-link" data-action="open-share-note">-->
+                                <!--<i class="fa fa-share"></i> 直接发布-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li> <a href="javascript:void(0)" data-action="open-move-note"> <i class="fa fa-folder-open"></i> 移动文章 </a> </li>-->
+                        <!--<li> <a href="javascript:void(0)" data-action="trigger-history-mode"> <i class="fa fa-clock-o"></i> 历史版本 </a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li> <a href="javascript:void(0)" data-action="delete-note"> <i class="fa fa-trash-o"></i> 删除文章 </a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="one-note" data-model="note" data-cid="c-7">-->
+                    <!--<i class="icon icon-note note-icon stop-share"></i>-->
+                    <!--<p class="abbreviate"></p>-->
+                    <!--<p class="wordage win-text">字数: 0</p>-->
+                    <!--<a href="javascript:void(0)" data-type="edit" class="note-link title">无标题文章</a>-->
+                    <!--<a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">-->
+                        <!--<i class="fa fa-gear"></i>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu arrow-top">-->
+                        <!--<li> <a href="javascript:void(0)" class="share-link" data-action="open-share-note">-->
+                                <!--<i class="fa fa-share"></i> 直接发布-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li> <a href="javascript:void(0)" data-action="open-move-note"> <i class="fa fa-folder-open"></i> 移动文章 </a> </li>-->
+                        <!--<li> <a href="javascript:void(0)" data-action="trigger-history-mode"> <i class="fa fa-clock-o"></i> 历史版本 </a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li> <a href="javascript:void(0)" data-action="delete-note"> <i class="fa fa-trash-o"></i> 删除文章 </a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <div class="one-note new-note-bottom"> <a href="javascript:void(0)" data-action="create-note">+在下方新建文章 <img src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" class="hide cnlb loader-tiny"></a> </div>
+        </div>
+    </div>
+    <div class="main_article">
+        <form class="note-form rich-text" method="post"  >
+            <input class="title mousetrap" name="title" id="note_title" type="text" value="创建文章标题">
+            <input name="notebook_name" id="notebook_name" type="text" style="display: none;">
+            <input name="notebook_id" id="notebook_id" type="text" style="display: none;">
+            <!--标签<br/>-->
+            <!--<input type="text" name="tag1" />-->
+            <!--<input type="text" name="tag2" />-->
+            <!--<input type="text" name="tag3" /><br/>-->
+            <!--图片<br/>-->
+            <!--<input type="file"   name="img" id="img1"onchange="upperCase(this.id)" /><br/>-->
+            <!--<input type="text" name="img" id="img2"  style="display: none;"/><br/>-->
+            <!--正文<br/>-->
+            <textarea id="kindeditor" name="post" rows="20" cols="100"></textarea><br/>
+            <input type="submit" value="发表"/>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<!--<form method="post" action="/post" enctype="multipart/form-data">-->
+
+    <!--标题<br/>-->
+    <!--<input type="text" name="title"/><br/>-->
+    <!--标签<br/>-->
+    <!--<input type="text" name="tag1" />-->
+    <!--<input type="text" name="tag2" />-->
+    <!--<input type="text" name="tag3" /><br/>-->
+    <!--图片<br/>-->
+    <!--<input type="file"   name="img" id="img1"onchange="upperCase(this.id)" /><br/>-->
+    <!--<input type="text" name="img" id="img2"  style="display: none;"/><br/>-->
+    <!--正文<br/>-->
+    <!--<textarea id="kindeditor" name="post" rows="20" cols="100"></textarea><br/>-->
+    <!--<input type="submit" value="发表"/>-->
+<!--</form>-->
+<script>
+    function upperCase(x)
+    {
+
+        var path=document.getElementById(x).value
+//        document.getElementById('img2').value=path;
+
+        var aa;
+        aa=path.split('.');
+//        document.all('TbxName').value=aa[aa.length-1];  //jpg 结果
+        console.log(aa)
+        var name;
+        name=path.split('\\');
+        var bb=name[name.length-1];
+//        document.all('Tbx_FileName').value=bb.substr(0,bb.indexOf('.'));  //AddFile 结果
+        console.log(bb)
+        document.getElementById('img2').value=bb
+
+//        console.log( document.getElementById('img2').value)
+    }
+
+</script>
+<%- include footer %>

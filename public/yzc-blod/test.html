@@ -1,0 +1,16 @@
+<html>
+<meta charset="UTF-8">
+<body>
+<p>选择这段文字</p>
+<button type="button" onclick="alert(getSelectText())">查看选中文字</button>
+</body>
+</html>
+<script>
+    function getSelectText(){
+        try{
+            return window.getSelection().toString();
+        }catch(e){
+            return document.selection.createRange().text;
+        }
+    }
+</script>

@@ -1,0 +1,91 @@
+<%- include header %>
+<div class="main_left">
+    <div class="bottom-block">
+        <h1>简书</h1>
+        <h3>交流故事，沟通想法</h3>
+        <p>一个基于内容分享的社区</p>
+        <br/>
+        <a class="btn btn-large btn-success" href="/post">提笔写篇文章</a>
+    </div>
+</div>
+<div class="main_right">
+    <div class="main_header">
+        <ul class="navigation">
+            <li class="active"> <a>关注</a></li>
+            <li> <a>发现</a></li>
+            <li> <a>时光机</a></li>
+            <li class="search">
+                <form class="search-form" target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+                    <input type="search" name="q" id="q" placeholder="搜索" class="input-medium search-query">
+                    <span class="search_trigger" onclick="$('form.search-form').submit();"><i class="fa fa-search"></i></span>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <div class="list-container">
+        <ul class="sort-nav">
+            <li class="active"><a>热门</a></li>
+            <li><a>新上榜</a></li>
+            <li><a>新上榜</a></li>
+            <li><a>新上榜</a></li>
+            <li><a>新上榜</a></li>
+            <li><a>新上榜</a></li>
+        </ul>
+
+
+
+        <ul class="article-list thumbnails">
+<% posts.forEach(function(post, index) { %>
+
+
+
+
+            <li class="have-img">
+                <a class="wrap-img" href="/p/d59ee9b0124b"> <%- post.post.match(/<img\b[^>]*>/) %></a>
+                <div>
+
+                    <p class="list-top">
+                        <a class="author-name blue-link" target="_blank" href="/u/<%= post.name %>"><%= post.name %></a>
+                        <em>·</em>
+                        <span class="time" data-shared-at="2016-07-06T20:33:46+08:00"><%= post.time.minute %></span>
+                    </p>
+                    <h4 class="title"><a target="_blank"  href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h4>
+                    <div class="list-footer">
+                        <a target="_blank" href="/p/d59ee9b0124b">
+                            阅读 <%= post.pv %>
+                        </a>
+                        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                            · 评论 <%=post.comments.length%>
+                        </a>
+                        <span> · 转载  <% if (post.reprint_info.reprint_to) { %>
+                            <%= post.reprint_info.reprint_to.length %>
+                            <% } else { %>
+                            <%= 0 %>
+                            <% } %></span>
+                        <span> · 打赏 0</span>
+
+                    </div>
+                </div>
+            </li>
+
+
+
+
+
+
+
+<% }) %>
+
+        </ul>
+
+        <%- include paging %>
+
+    </div>
+</div>
+<script>
+    function aa(){
+
+    }
+</script>
+
+<%- include footer %>

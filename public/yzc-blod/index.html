@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link  rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/layer/layer.js"></script>
+</head>
+
+<script>
+    $(function(){
+        layer.msg('这是最常用的吧');
+    })
+</script>
+<body class="output">
+
+
+    <!--<div class="navbar-user">-->
+        <!--<a class="login" data-signup-link="true" data-toggle="modal" href="/sign_up">-->
+            <!--<i class="fa fa-user"></i> 注册-->
+        <!--</a>    <a class="login" data-signin-link="true" data-toggle="modal" href="/sign_in">-->
+        <!--<i class="fa fa-sign-in"></i> 登录-->
+    <!--</a>    <a class="daytime set-view-mode pull-right" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>-->
+    <!--</div>-->
+
+    <div class="navbar-user open">
+        <a class="user avatar" data-toggle="dropdown" href="javascript:void(0)">
+            <img src="images/14-75d944a989bbbd5b92a639698c9b4a3c.jpg" alt="14"> <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu arrow-top" role="menu" aria-labelledby="dLabel">
+        <li>
+            <a href="/writer#/"><i class="fa fa-pencil"></i> 写文章</a>
+        </li>
+        <li>
+            <a target="_blank" href="/users/304734d3ba47"><i class="fa fa-user"></i> 我的主页</a>
+        </li>
+        <li>
+            <a href="/favourites">
+                <i class="fa fa-heart"></i> 我喜欢的
+            </a>  </li>
+        <li>
+            <a href="/bookmarks">
+                <i class="fa fa-bookmark"></i> 我的收藏
+            </a>  </li>
+        <li>
+            <a href="/notifications">
+                <i class="fa fa-bell"></i> 提醒
+            </a>  </li>
+        <li>
+            <a href="/chats">
+                <i class="fa fa-envelope"></i> 简信
+            </a>  </li>
+        <li><a href="/settings"><i class="fa fa-cogs"></i> 设置</a></li>
+        <li>
+            <a href="/wallet">
+                <i class="fa fa-credit-card"></i> 钱包
+            </a>  </li>
+        <li class="dropdown-submenu">
+            <a tabindex="-1" href="#"><i class="fa fa-question-circle"></i> 帮助</a>
+            <ul class="dropdown-menu">
+                <li><a href="http://www.jianshu.com/notebooks/547/latest" target="_blank">帮助中心</a></li>
+                <li><a target="_blank" href="/contact">联系我们</a></li>
+            </ul>
+        </li>
+        <li>
+            <a rel="nofollow" data-method="DELETE" href="/sign_out">
+                <i class="fa fa-sign-out"></i> 登 出
+            </a>  </li>
+
+    </ul>
+        <a class="daytime set-view-mode pull-right" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>
+    </div>
+
+
+
+    <div class="nav_left">
+        <div class="nav_left_top">
+            <div class="logo">
+                <a><b>简</b></a>
+            </div>
+            <div class="tip">
+                <i class="fa fa-th"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-users"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-mobile"></i>
+            </div>
+        </div>
+        <div class="nav_left_bottom">
+            <div class="tip">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-bookmark"></i>
+            </div>
+            <div class="tip">
+                <i id="notify-icon" class="fa fa-bell"></i>
+            </div>
+            <div class="tip">
+                <i id="chat-message-icon" class="fa fa-envelope"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-font"></i>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main_left">
+            <div class="bottom-block">
+                <h1>简书</h1>
+                <h3>交流故事，沟通想法</h3>
+                <p>一个基于内容分享的社区</p>
+                <br/>
+                <a class="btn btn-large btn-success" href="/writer#/">提笔写篇文章</a>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="main_header">
+                <ul class="navigation">
+                    <li> <a>关注</a></li>
+                    <li class="active"> <a>发现</a></li>
+                    <li> <a>时光机</a></li>
+                    <li class="search">
+                        <form class="search-form" target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+                            <input type="search" name="q" id="q" placeholder="搜索" class="input-medium search-query">
+                            <span class="search_trigger" onclick="$('form.search-form').submit();"><i class="fa fa-search"></i></span>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="list-container">
+                <ul class="sort-nav">
+                    <li class="active"><a>热门</a></li>
+                    <li><a>新上榜</a></li>
+                    <li><a>新上榜</a></li>
+                    <li><a>新上榜</a></li>
+                    <li><a>新上榜</a></li>
+                    <li><a>新上榜</a></li>
+                </ul>
+
+
+
+                <ul class="article-list thumbnails">
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="have-img">
+                        <a class="wrap-img" href="/p/d59ee9b0124b"><img src="http://upload-images.jianshu.io/upload_images/2326254-6a1237d8f6f9b894.png?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300"></a>
+                        <div>
+                            <p class="list-top">
+                                <a class="author-name blue-link" target="_blank" href="/users/328b4395ff30">呗壳</a>
+                                <em>·</em>
+                                <span class="time" data-shared-at="2016-07-06T20:33:46+08:00">大约12小时之前</span>
+                            </p>
+                            <h4 class="title"><a target="_blank" href="/p/d59ee9b0124b">干货｜低水平英语能力者如何在日常中学习英语</a></h4>
+                            <div class="list-footer">
+                                <a target="_blank" href="/p/d59ee9b0124b">
+                                    阅读 6587
+                                </a>        <a target="_blank" href="/p/d59ee9b0124b#comments">
+                                · 评论 97
+                            </a>        <span> · 喜欢 653</span>
+                                <span> · 打赏 2</span>
+
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+                <div class="load-more"><button class="ladda-button " data-style="slide-left" data-type="script" data-remote="" data-size="medium" data-url="/top/daily?note_ids%5B%5D=4678815&amp;note_ids%5B%5D=4691966&amp;note_ids%5B%5D=4707729&amp;note_ids%5B%5D=4692148&amp;note_ids%5B%5D=4691100&amp;note_ids%5B%5D=4705630&amp;note_ids%5B%5D=4688185&amp;note_ids%5B%5D=4704186&amp;note_ids%5B%5D=4703437&amp;note_ids%5B%5D=4692376&amp;note_ids%5B%5D=4578089&amp;note_ids%5B%5D=4692428&amp;note_ids%5B%5D=4515489&amp;note_ids%5B%5D=4693189&amp;note_ids%5B%5D=4703140&amp;note_ids%5B%5D=4704592&amp;note_ids%5B%5D=4707467&amp;note_ids%5B%5D=4656729&amp;note_ids%5B%5D=4700408&amp;note_ids%5B%5D=4696482&amp;page=2" data-color="maleskine" data-method="get">
+                    <span class="ladda-label">点击查看更多</span>
+                    <span class="ladda-spinner"></span></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    var a="57a3eebd001ab6980c84dc83";
+    var b="57a3f8a4b1fc2900172a846a"
+if(a==b){
+    alert(1)
+}else{
+    alert(2)
+}
+
+
+   var timestamp = Date.parse(new Date());
+    console.log(timestamp)
+</script>
+</body>
+</html>

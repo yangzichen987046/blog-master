@@ -1,0 +1,104 @@
+<%- include header-- %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main">
+    <div class="wf-main" id="wf-main">
+        <% posts.forEach(function(post, index) { %>
+        <div class="wf-cld">
+            <img src="images/<%= post.img %>">
+            <p class="peo_num"><img src="images/eye.gif">128</p>
+            <p class="title"><%= post.title %></p>
+            <p class="context"><%- post.post %>
+            </p>
+        </div>
+        <% }) %>
+    </div>
+    <div class="loading">
+        <img src="images/loading.gif"><span>正在加载...</span>
+    </div>
+
+
+    <div class="tcdPageCode"></div>
+</div>
+
+<!--<div id="navigation"><a href="news?p=2"></a></div>-->
+<% if (!isLastPage) { %>
+    <div id="navigation"><a href="news?p=<%= page+1 %>"></a></div>
+
+<% } %>
+
+
+<div class="top">
+    <img src="images/top.jpg">
+    <img src="images/topon.jpg" style="display: none;">
+</div>
+
+
+
+<footer>
+    <div class="foot">
+        <div class="bottom">
+            <a>© 2016  北京快注知识产权代理有限公司    京ICP备15014318号-5</a>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+
+    $(window).load(function() {
+
+        $(".sou").find("img").click(function(){
+            alert(1)
+        });
+
+        $(".contain").find("li").each(function () {
+            $(this).mouseenter(function () {
+                $(this).find("img").eq(0).hide()
+                $(this).find("img").eq(1).show()
+            });
+            $(this).mouseleave(function () {
+                $(this).find("img").eq(1).hide()
+                $(this).find("img").eq(0).show()
+            });
+        });
+
+
+        $(".nn").mouseenter(function () {
+            $(this).find("img").eq(0).hide()
+            $(this).find("img").eq(1).show()
+        });
+        $(".nn").mouseleave(function () {
+            $(this).find("img").eq(1).hide()
+            $(this).find("img").eq(0).show()
+        });
+        $(".top").mouseenter(function () {
+            $(this).find("img").eq(0).hide()
+            $(this).find("img").eq(1).show()
+        });
+        $(".top").mouseleave(function () {
+            $(this).find("img").eq(1).hide()
+            $(this).find("img").eq(0).show()
+        });
+
+    });
+
+</script>
+
+
+
+
+
+
+
+<%- include paging %>
+<%- include footer %>

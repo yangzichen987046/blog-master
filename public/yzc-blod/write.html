@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link  rel="stylesheet" href="css/index.css">
+    <link  rel="stylesheet" href="css/write.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body class="output">
+
+    <div class="nav_left">
+        <div class="nav_left_top">
+            <div class="logo">
+                <a><b>简</b></a>
+            </div>
+            <div class="tip">
+                <i class="fa fa-th"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-users"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-mobile"></i>
+            </div>
+        </div>
+        <div class="nav_left_bottom">
+            <div class="tip">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-bookmark"></i>
+            </div>
+            <div class="tip">
+                <i id="notify-icon" class="fa fa-bell"></i>
+            </div>
+            <div class="tip">
+                <i id="chat-message-icon" class="fa fa-envelope"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-font"></i>
+            </div>
+        </div>
+    </div>
+    <div class="nav_right">
+        <div class="writer-nav-header"></div>
+        <div class="aside">
+            <div class="new-notebook">
+                <a href="javascript:void(0)" class="create-notebook win-text"> +新建文集 <img src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" class="hide loader-tiny create-notebook-loader" style="display: none;"> </a>
+            </div>
+            <ul class="nav nav-list notebooks ui-sortable">
+
+                <li class="one-notebook item active">
+                    <div class="icon icon-notebook pull-left"></div><div class="pull-left word">1212</div>
+                    <div class="edit-notebook dropdown-toggle pull-right">
+                        <i class="fa fa-gear"></i>
+                    </div>
+                </li>
+                <li class="one-notebook item">
+                    <div class="icon icon-notebook pull-left"></div><div class="pull-left word">1212</div>
+                    <div class="edit-notebook dropdown-toggle pull-right">
+                        <i class="fa fa-gear"></i>
+                    </div>
+                </li>
+                <li class="one-notebook item">
+                    <div class="icon icon-notebook pull-left"></div><div class="pull-left word">1212</div>
+                    <div class="edit-notebook dropdown-toggle pull-right">
+                        <i class="fa fa-gear"></i>
+                    </div>
+                </li>
+                <li class="one-notebook item">
+                    <div class="icon icon-notebook pull-left"></div><div class="pull-left word">1212</div>
+                    <div class="edit-notebook dropdown-toggle pull-right">
+                        <i class="fa fa-gear"></i>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="commercial">   <p>属于写作者的文集, 一个简洁而优雅的环境让你专注于书写。</p>   <div class="btn text-center" href="javascript:void(null)" data-action="recycle-mode">回收站</div></div>
+        </div>
+        <div class="middle">
+            <div class="notes_list">
+                <div id="new-note"> <a href="javascript:void(0)" data-action="create-note" class="new-note-link"> <i class="icon fa fa-pencil"></i> <span class="win-text">+新建文章 <img src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" class="hide cnlt loader-tiny"></span> </a> </div>
+
+                <ul class="nav nav-list notes ui-sortable">
+                    <li class="one-note active" data-model="note" data-cid="c-7">
+                        <i class="icon icon-note note-icon stop-share"></i>
+                        <p class="abbreviate">123132123123asd</p>
+                        <p class="wordage win-text">字数: 0</p>
+                        <a href="javascript:void(0)" data-type="edit" class="note-link title">无标题文章</a>
+                        <a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-gear"></i>
+                        </a>
+                        <ul class="dropdown-menu arrow-top">
+                            <li> <a href="javascript:void(0)" class="share-link" data-action="open-share-note">
+                                <i class="fa fa-share"></i> 直接发布
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li> <a href="javascript:void(0)" data-action="open-move-note"> <i class="fa fa-folder-open"></i> 移动文章 </a> </li>
+                            <li> <a href="javascript:void(0)" data-action="trigger-history-mode"> <i class="fa fa-clock-o"></i> 历史版本 </a></li>
+                            <li class="divider"></li>
+                            <li> <a href="javascript:void(0)" data-action="delete-note"> <i class="fa fa-trash-o"></i> 删除文章 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="one-note" data-model="note" data-cid="c-7">
+                        <i class="icon icon-note note-icon stop-share"></i>
+                        <p class="abbreviate"></p>
+                        <p class="wordage win-text">字数: 0</p>
+                        <a href="javascript:void(0)" data-type="edit" class="note-link title">无标题文章</a>
+                        <a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-gear"></i>
+                        </a>
+                        <ul class="dropdown-menu arrow-top">
+                            <li> <a href="javascript:void(0)" class="share-link" data-action="open-share-note">
+                                <i class="fa fa-share"></i> 直接发布
+                            </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li> <a href="javascript:void(0)" data-action="open-move-note"> <i class="fa fa-folder-open"></i> 移动文章 </a> </li>
+                            <li> <a href="javascript:void(0)" data-action="trigger-history-mode"> <i class="fa fa-clock-o"></i> 历史版本 </a></li>
+                            <li class="divider"></li>
+                            <li> <a href="javascript:void(0)" data-action="delete-note"> <i class="fa fa-trash-o"></i> 删除文章 </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="one-note new-note-bottom"> <a href="javascript:void(0)" data-action="create-note">+在下方新建文章 <img src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" class="hide cnlb loader-tiny"></a> </div>
+            </div>
+        </div>
+        <div class="main">
+            <form class="note-form rich-text">
+                <input class="title mousetrap" name="note_title" id="note_title" type="text" value="无标题文章">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

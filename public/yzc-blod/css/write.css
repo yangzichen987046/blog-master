@@ -1,0 +1,266 @@
+li{list-style: none;}
+.writer-nav-header{height:20px;background: #fff;border-bottom: 1px solid #d9d9d9;}
+.nav_right .aside{width: 16.66667%;float: left;}
+.nav_right .middle{width: 25%;float: left;border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;}
+.nav_right .main{width: 58%;float: left;}
+
+.nav_right .aside .new-notebook{padding: 0 20px;  margin-top: 20px;  margin-bottom: 10px;}
+.nav_right .aside .new-notebook a{    font-style: italic;  font-size: 11px;  font-weight: normal;  line-height: 20px;}
+.nav_right .aside .notebooks{list-style: none; padding-left: 0px;}
+.nav_right .aside .notebooks li.active{list-style: none;line-height: 27px;height:36px;background:#e78170 !important;    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.35),0 1px 4px rgba(0,0,0,0.15); }
+.nav_right .aside .notebooks li.active .icon-notebook{background: url("../images/sprite-1d28b1a5e9c3a6854a8c262666504212.png");background-repeat: no-repeat;background-position: -22px 0;background-size: 250px;height: 20px;
+    margin-top: 8px;
+    width:40px;
+    margin-left: 15px;
+    display: inline-block;}
+.nav_right .aside .notebooks li.active .word{line-height: 36px; color:#fff;margin-left: 10px;}
+.nav_right .aside .notebooks li.active .edit-notebook {
+   line-height: 36px;
+    color:#fff;
+    margin-right: 10px;
+    display: block;
+}
+.nav_right .aside .notebooks li{list-style: none;line-height: 27px;height:36px;background:#fff;   }
+.nav_right .aside .notebooks li .icon-notebook{background: url("../images/sprite-1d28b1a5e9c3a6854a8c262666504212.png");background-repeat: no-repeat;background-position: 0 0;background-size: 250px;height: 20px;
+    margin-top: 8px;
+    width:20px;
+    margin-left: 15px;
+    display: inline-block;}
+.nav_right .aside .notebooks li .edit-notebook{
+    line-height: 36px;
+    color:#fff;
+    margin-right: 10px;
+    display: none;
+}
+.nav_right .aside .notebooks li .word{line-height: 36px; color:#000;margin-left: 10px;}
+.nav_right .aside .notebooks li:hover{background: #eee;cursor: pointer;}
+
+.commercial {
+    position: absolute;
+    bottom: 0;
+    width: 16.66667%;
+    color: #999999;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.commercial p {
+    padding: 0 15px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.commercial .btn {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.text-center{text-align: center;}
+
+.middle .new-note-link {
+    display: block;
+    padding: 5px 10px 5px 20px;
+    margin-top: 8px;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.middle .fa-pencil {
+    font-size: 18px;
+}
+.notes {
+    border-top: 1px solid #d9d9d9;
+    padding: 0;
+    margin: 0px;
+}
+.middle .nav-list>.active, .middle .nav-list>.active:hover {
+    background-color: #d1c091;
+    color: #eeeeee;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+    box-shadow: inset 0px 0px 10px rgba(0,0,0,0.2);
+    -webkit-transition: background-color 0.3s linear;
+    -moz-transition: background-color 0.3s linear;
+    -o-transition: background-color 0.3s linear;
+    transition: background-color 0.3s linear;
+}
+.notes .one-note {
+    position: relative;
+    max-height: 90px;
+    height: 90px;
+    border-bottom: 1px solid #d9d9d9;
+    background-color: transparent;
+}
+
+.notes .icon-note {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    width: 22px;
+    height: 30px;
+    background-position: 0 -25px;
+    background-image: url(../images/sprite-1d28b1a5e9c3a6854a8c262666504212.png);
+    background-image: url(../images/sprite-1d28b1a5e9c3a6854a8c262666504212.png) \9;
+    background-repeat: no-repeat;
+    background-size: 250px;
+}
+.notes .active .icon-note {
+    background-position: -25px -25px;
+}
+
+.nav-list>.active>a, .nav-list>.active>a:hover, .nav-list>.active>a:focus {
+    color: white;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+
+}
+.notes .title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 15px 40px 15px 60px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 36px;
+}
+
+.middle .one-note .abbreviate {
+    cursor: pointer;
+}
+.notes .abbreviate {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    right: 40px;
+    max-height: 30px;
+    height: 30px;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 36px;
+}
+.notes .wordage {
+    position: absolute;
+    bottom: -7px;
+    left: 5px;
+    font-style: italic;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 9px;
+    font-weight: normal;
+    line-height: 16px;
+    display: none;
+}
+.active>.wordage, .notes .active>.share-note, .notes .active>.share-note:hover {
+    display: block;
+    box-shadow: none;
+}
+.notes .share-note {
+    position: absolute;
+    padding: 0;
+    right: 26px;
+    top: 35px;
+    display: none;
+    font-size: 16px;
+}
+
+.middle .new-note-bottom {
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+}
+.middle .new-note-bottom a {
+    height: 30px;
+    display: block;
+    padding-top: 10px;
+    color: #999999;
+}
+.loader-tiny {
+    width: 17px;
+}
+
+.main .rich-text, .main .markdown {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+.main .title, .main .markdown .text, .main .rich-text .text {
+    height: 50px;
+
+    border: 0px;
+    outline: none;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+
+}
+.main .title {
+    width: 100%;
+    padding: 10px 20px 10px 30px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #d9d9d9;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 0;
+    box-shadow: none;
+}
+.main {
+    position: relative;
+    padding: 20px 0 0 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

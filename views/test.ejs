@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script charset="utf-8" src="/kindeditor/kindeditor.js"></script>
+    <script charset="utf-8" src="/kindeditor/lang/zh_CN.js"></script>
+    <script>
+        var options = {
+            uploadJson: '/uploadImg'
+        };
+
+        KindEditor.ready(function(K) {
+            window.editor = K.create('#editor', options);
+        });
+    </script>
+</head>
+<body>
+<h1><%= title %></h1>
+    <textarea id="editor" name="content" style="width:700px;height:300px;" >
+        &lt;strong&gt;HTML内容&lt;/strong&gt;
+    </textarea>
+</body>
+</html>

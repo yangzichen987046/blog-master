@@ -1,0 +1,128 @@
+<!--<div id="disqus_thread"></div>-->
+<!--<script>-->
+    <!--/**-->
+     <!--* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.-->
+     <!--* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables-->
+     <!--*/-->
+    <!--/*-->
+     <!--var disqus_config = function () {-->
+     <!--this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable-->
+     <!--this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable-->
+     <!--};-->
+     <!--*/-->
+    <!--(function() { // DON'T EDIT BELOW THIS LINE-->
+        <!--var d = document, s = d.createElement('script');-->
+
+        <!--s.src = '//n-blogs.disqus.com/embed.js';-->
+
+        <!--s.setAttribute('data-timestamp', +new Date());-->
+        <!--(d.head || d.body).appendChild(s);-->
+    <!--})();-->
+<!--</script>-->
+
+
+
+
+
+
+
+
+<form class="new_comment second_comment" id="new_comment"   method="post">
+    <input name="utf8" type="hidden" value="✓">
+    <div class="comment-text">
+
+        <textarea maxlength="2000" placeholder="写下你的评论…" class="mousetrap" name="content" id="comment_content"></textarea>
+        <div style="display: none;">
+            <% if (user) { %>
+            回复姓名：<input type="text" name="data_name" value="0" class="data_name"/><br />
+            回复时间：<input type="text" name="data_time" value="1" class="data_time"/><br />
+            姓名：<input type="text" name="name" value="<%= user.name %>" /><br />
+            邮箱：<input type="text" name="email" value="<%= user.email %>" /><br />
+            网址：<input type="text" name="website" value="/u/<%= user.name %>" /><br />
+            <% } else { %>
+            回复姓名：<input type="text" name="data_name" value="00" class="data_name"/><br />
+            回复时间：<input type="text" name="data_time" value="11" class="data_time"/><br />
+            姓名：<input type="text" name="name" /><br />
+            邮箱：<input type="text" name="email" /><br />
+            网址：<input type="text" name="website" value="http://" /><br />
+            <% } %>
+        </div>
+        <div>
+            <input type="submit"  value="发 表1" class="btn btn-info" data-disable-with="提交中...">
+            <div class="emoji">
+                <a href="#emoji-modal" data-toggle="modal"><i class="fa fa-smile-o"></i></a>
+
+            </div>
+            <input class="hotkey" type="submit" value="Ctrl+Enter 发表" />
+            <!--<span class="hotkey">Ctrl+Enter 发表</span>-->
+            <span class="warning" style="display: none"><i class="fa fa-exclamation-circle"></i><span class="warning-text"></span></span>
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+<!--<form method="post">-->
+    <!--<% if (user) { %>-->
+    <!--姓名：<input type="text" name="name" value="<%= user.name %>" /><br />-->
+    <!--邮箱：<input type="text" name="email" value="<%= user.email %>" /><br />-->
+    <!--网址：<input type="text" name="website" value="/u/<%= user.name %>" /><br />-->
+    <!--<% } else { %>-->
+    <!--姓名：<input type="text" name="name" /><br />-->
+    <!--邮箱：<input type="text" name="email" /><br />-->
+    <!--网址：<input type="text" name="website" value="http://" /><br />-->
+    <!--<% } %>-->
+    <!--<textarea name="content" rows="5" cols="80"></textarea><br />-->
+    <!--<input type="submit" value="留言" />-->
+<!--</form>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<% post.comments.forEach(function (comment, index) { %>-->
+<!--<div style="padding-left:4em">-->
+    <!--<p><img src="<%= comment.head %>" class="l_head" /><a href="<%= comment.website %>"><%= comment.name %></a>-->
+        <!--<span class="info"> 回复于 <%= comment.time %></span></p>-->
+    <!--<p><%- comment.content %></p>-->
+<!--</div>-->
+<!--<% }) %>-->
+
+<!--<form method="post">-->
+    <!--<% if (user) { %>-->
+    <!--姓名：<input type="text" name="name" value="<%= user.name %>" /><br />-->
+    <!--邮箱：<input type="text" name="email" value="<%= user.email %>" /><br />-->
+    <!--网址：<input type="text" name="website" value="/u/<%= user.name %>" /><br />-->
+    <!--<% } else { %>-->
+    <!--姓名：<input type="text" name="name" /><br />-->
+    <!--邮箱：<input type="text" name="email" /><br />-->
+    <!--网址：<input type="text" name="website" value="http://" /><br />-->
+    <!--<% } %>-->
+    <!--<textarea name="content" rows="5" cols="80"></textarea><br />-->
+    <!--<input type="submit" value="留言" />-->
+<!--</form>-->

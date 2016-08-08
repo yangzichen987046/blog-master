@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link  rel="stylesheet" href="css/index.css">
+    <link  rel="stylesheet" href="css/article.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+</head>
+<body class="output">
+
+
+    <!--<div class="navbar-user">-->
+        <!--<a class="login" data-signup-link="true" data-toggle="modal" href="/sign_up">-->
+            <!--<i class="fa fa-user"></i> 注册-->
+        <!--</a>    <a class="login" data-signin-link="true" data-toggle="modal" href="/sign_in">-->
+        <!--<i class="fa fa-sign-in"></i> 登录-->
+    <!--</a>    <a class="daytime set-view-mode pull-right" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>-->
+    <!--</div>-->
+    <div class="nav_left">
+        <div class="nav_left_top">
+            <div class="logo">
+                <a><b>简</b></a>
+            </div>
+            <div class="tip">
+                <i class="fa fa-th"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-users"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-pencil"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-mobile"></i>
+            </div>
+        </div>
+        <div class="nav_left_bottom">
+            <div class="tip">
+                <i class="fa fa-user"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-bookmark"></i>
+            </div>
+            <div class="tip">
+                <i id="notify-icon" class="fa fa-bell"></i>
+            </div>
+            <div class="tip">
+                <i id="chat-message-icon" class="fa fa-envelope"></i>
+            </div>
+            <div class="tip">
+                <i class="fa fa-font"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="article">
+        <div class="article_header">
+            <div class="article-related pull-left">
+                <a class="collection-menu-btn" data-toggle="modal" data-target="#collection-menu" href="javascript:void(null);">
+                    <i class="fa fa-th"></i>
+                </a>
+                <a class="notebooks-menu-btn" data-toggle="modal" data-target="#notebooks-menu" href="javascript:void(null);"><i class="fa fa-list-ul"></i></a>
+            </div>
+            <div class="btn-group editor-article">
+                <div class="pull-left"><a><i class="fa fa-bookmark-o"></i></a></div>
+                <div class="pull-left"><a><i class="fa fa-share-square-o"></i></a></div>
+            </div>
+            <div class="navbar-user">
+                <a class="user avatar" data-toggle="dropdown" href="javascript:void(0)">
+                    <img src="images/14-75d944a989bbbd5b92a639698c9b4a3c.jpg" alt="14"> <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu arrow-top" role="menu" aria-labelledby="dLabel">
+                    <li>
+                        <a href="/writer#/"><i class="fa fa-pencil"></i> 写文章</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="/users/304734d3ba47"><i class="fa fa-user"></i> 我的主页</a>
+                    </li>
+                    <li>
+                        <a href="/favourites">
+                            <i class="fa fa-heart"></i> 我喜欢的
+                        </a>  </li>
+                    <li>
+                        <a href="/bookmarks">
+                            <i class="fa fa-bookmark"></i> 我的收藏
+                        </a>  </li>
+                    <li>
+                        <a href="/notifications">
+                            <i class="fa fa-bell"></i> 提醒
+                        </a>  </li>
+                    <li>
+                        <a href="/chats">
+                            <i class="fa fa-envelope"></i> 简信
+                        </a>  </li>
+                    <li><a href="/settings"><i class="fa fa-cogs"></i> 设置</a></li>
+                    <li>
+                        <a href="/wallet">
+                            <i class="fa fa-credit-card"></i> 钱包
+                        </a>  </li>
+                    <li class="dropdown-submenu">
+                        <a tabindex="-1" href="#"><i class="fa fa-question-circle"></i> 帮助</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="http://www.jianshu.com/notebooks/547/latest" target="_blank">帮助中心</a></li>
+                            <li><a target="_blank" href="/contact">联系我们</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a rel="nofollow" data-method="DELETE" href="/sign_out">
+                            <i class="fa fa-sign-out"></i> 登 出
+                        </a>  </li>
+
+                </ul>
+                <a class="daytime set-view-mode pull-right" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="container_article">
+                <div class="author-info">
+                    <div class="btn btn-small btn-success follow" id="follow_user_1552009">
+                        <a data-type="json" data-user-slug="52c7157f6cb0" data-remote="true" rel="nofollow" data-method="post" href="/users/52c7157f6cb0/toggle_like"><i class="fa fa-plus"></i>  <span>添加关注</span></a>
+                    </div>
+
+                    <a class="avatar" href="/users/52c7157f6cb0">
+                        <img src="http://upload.jianshu.io/users/upload_avatars/1552009/8ae0f4820cb7.jpg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                    </a>            <span class="label">
+                作者
+            </span>
+                    <a class="author-name blue-link" href="/users/52c7157f6cb0">
+                        <span>常圣言</span>
+                    </a>              <span data-toggle="tooltip" data-original-title="最后编辑于 2016.07.10 15:29">2016.07.10 09:08*</span>
+                    <div>
+                        <span>写了61727字</span>，<span>被720人关注</span>，<span>获得了3451个喜欢</span>
+                    </div>
+                </div>
+                <h1 class="title">不要做那个，不主动联系的人</h1>
+                <div class="meta-top">
+                    <span class="wordage">字数1851</span>
+                    <span class="views-count">阅读4301</span>
+                    <span class="comments-count">评论93</span>
+                    <span class="likes-count">喜欢111</span>
+                </div>
+                <div class="show-content"><p>1.<br></p><p>闲着没事刷朋友圈看到一句话，“不主动联系你，才是对你真正的尊重和关心。”</p><p>我觉得这就是一句屁话。</p><p>在这个智能手机烂大街，联系一个人不费吹灰之力的年代，如果一个人没有主动联系你，那只能说明他不在乎你，他才不是因为自己忙，想一个人静静，也不是理解你忙，想做一个懂事的人。</p><p>我上大学的时候，交了一个朋友，他家是合肥的，来郑州上大学。同在一个班，本来不熟悉，偶尔的一次旅游，路上聊天谈心，甚是合得来，于是就成了好朋友。他人比较孤僻，话也少，所以大部分时候都是我在主动。</p><p>有一次，学校傍晚的操场，我们跑步，我问他，你难道不会主动联系我吗？他沉思了一会儿，回答我说，他是个被动的人。又给我说，他在合肥老家有个好朋友，他们一年也不会联系一次，但是他们关系依然很好。</p><p>我想，既然都是好朋友，又何必在乎这些鸡毛蒜皮的小事。然后，四年下来，他真的从来没有主动联系过我，直至大学毕业，他去了英国读研，我留在郑州，我们再也没有联系，友情也渐渐淡了。后来同学聚餐，听他舍友说，他根本没把我当朋友，他一心扑在出国上，和我交朋友，只是不想让别人觉得他孤单。</p><p><b>我觉得真正的好朋友，应该是相互主动的，你来我往，彼此把各自放在心上。他不主动联系你，只能证明他没把你当回事。</b></p><p><br></p><div class="image-package imagebubble" widget="ImageBubble">
+                    <img src="http://upload-images.jianshu.io/upload_images/1552009-952aa3bf944755e9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1552009-952aa3bf944755e9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="imagebubble-image"><br><div class="image-caption">
+
+                </div>
+                </div><p>2.</p><p>我也目睹过两个原本是情侣的人因为不主动联系分手。</p><p>韩和李是大学同学，毕业之后，韩在郑州的医院当了护士，李考研成功上了研究生。同样都是单身，李向韩告白，韩说，先处着吧。李欣喜若狂，跑了大老远给韩买了一束花。本以为这是一段美好的爱情，韩用心呵护。</p><p>然而矛盾慢慢浮出水面，韩发现，李从来不会主动关心她。自从成为恋人之后，李就像消失了一样，没有一点音讯。他没有情侣的嘘寒问暖，没有情侣的呵护备至，韩就像李采来的一朵美丽的花，插在花瓶里，任由它自生自灭。</p><p>韩失望之极，哭着打电话给李，李在实验室，听着韩的委屈，自己心里也难过。韩说，你根本不喜欢我？你只是想找个女朋友摆脱单身。</p><p>李靠在实验室的窗户上，情绪低落地说，我喜欢你啊。</p><p>韩说，喜欢我，为什么不主动联系我，我等啊等，一星期，两星期等不来你的电话，我联系你，你也是态度冷漠。</p><p>李说，实验室忙，忘了。</p><p>纠纠缠缠，两个月他们分手了。</p><p>韩忍受不了一个没有温度的男人，她悄悄告诉我说，她要的不多，一个电话就足够，不必甜言蜜语，聊聊日常就好，然而李以忙为借口，掩盖了这一切。其实，韩更忙，她白天黑夜的上班，医院病人多，有时候饭都来不及吃，但是一有空隙，她就会给李打电话。</p><p><b>别说，不联系是希望各自有相对独立的自由度，别说不联系是尊重彼此的空间，在需要的时候，相互取暖。别自欺欺人了，不联系，不主动就是因为你不爱。</b></p><p><br></p>
+                    <div class="image-package imagebubble" widget="ImageBubble">
+                    <img src="http://upload-images.jianshu.io/upload_images/1552009-20b77893b1f96cf1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1552009-20b77893b1f96cf1.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="imagebubble-image"><br><div class="image-caption"></div>
+                </div><p>3.</p><p>央视有一则公益广告，父母给子女打电话，子女要么在和同学聚餐，要么在外旅游，要么正在工作，父母问，吃饭了吗？他们说吃了，然后说，正在忙，挂了电话。没反应过来的父母，拿着话筒，孤单地站在电话机旁，身后是一桌子的菜。</p><p>当然这是一则广告，有无限弥补美好的可能，但是在现实中，留给人的机会却少之又少。</p><p>上学的你，谈了恋爱，和对象一天无数个电话，却从来没有主动给父母打一个，甚至面对父母的电话，不耐烦地挂掉。</p><p>上班的你，因为工作上的事烦心，只想一个人躲在无人的角落，抚慰伤痛，想着等挣了钱，给父母买好吃的，好穿的。</p><p>结婚后，孩子的事，让你焦头烂额，无暇顾及其他，你终于明白为人父母的艰难，可是呢？</p><p>在朋友圈发一句父母节日快乐，何其简单，然而不如打个电话，说声，我很好。</p><p>别等到子欲养而亲不在的伤痛，别被动等候父母的主动，<b>做一个主动联系父母，关心父母的人才是真正的孝子。</b></p><p><br></p>
+                    <div class="image-package imagebubble" widget="ImageBubble">
+                    <img src="http://upload-images.jianshu.io/upload_images/1552009-553047782b19e75c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" data-original-src="http://upload-images.jianshu.io/upload_images/1552009-553047782b19e75c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" class="imagebubble-image"><br><div class="image-caption"></div>
+                </div><p>4.</p><p><b>感情久不联系会变淡，人不主动会被取代。</b></p><p>认识一个朋友很多的人。他语重心长地告诉我说，朋友至少要一个月联系一次。在他的手机里，那些电话号码，他清楚的知道哪些该联系了，哪些已经联系过了。每个月，他都会给他的那些朋友打电话，每个月他都不会冷落他的朋友。所以，从小到大的朋友，他都玩的很好，他们相互帮助，相互鼓励，各自的生活也都不错。</p><p>还认识一个爱情美好的人，他是我舍友，每天的早中晚，他都会给她女朋友打电话，我问过他，累不累？他说，不累啊，反而很幸福。他们谈了两年，中途经历了别人的相爱分手，但是他们一直感情稳定。他说，他也没有什么爱情秘诀，就是每天雷打不动的打三个电话。</p><p>L和父母的关系也很好，她一星期要给父母打几次电话，没课就会回家。主动联系父母，成为她和父母的纽带。</p><p><b>要做一个主动联系的人，维护好自己的友情，爱情，亲情。同时也要记住，一个人主不主动，代表了他用不用心，所有的不联系为你好，都是掩盖自私的借口。</b></p></div>
+
+            </div>
+            <div class="meta-bottom clearfix">
+                <!--  Like Button -->
+                <div class="like ">
+                    <div class="like-button">
+                        <a class="like-content" data-remote="true" rel="nofollow" data-method="post" href="/notes/4732925/like">
+                            <i class="fa fa-heart-o"></i>  喜欢
+                        </a></div>          <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户">276</span>        </div>
+                <!--  share group -->
+                <div class="share-group pull-right">
+                    <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=1881139527',u=z||d.location,p=['&amp;url=',e(u),'&amp;title=',e(t||d.title),'&amp;source=',e(r),'&amp;sourceUrl=',e(l),'&amp;content=',c||'gb2312','&amp;pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','http://cwb.assets.jianshu.io/notes/images/4732925/weibo/image_ca4538a9cd83.jpg', '推荐 @常圣言 的文章《不要做那个，不主动联系的人》（ 分享自 @简书 ）','http://www.jianshu.com/p/26ff5c0bfe6a','页面编码gb2312|utf-8默认gb2312'));" data-name="weibo">
+                        <i class="fa fa-weibo"></i><span>分享到微博</span>
+                    </a>
+                    <a data-toggle="modal" href="#share-weixin-modal" data-name="weixin">
+                        <i class="fa fa-weixin"></i><span>分享到微信</span>
+                    </a>
+                    <div class="more">
+                        <a href="javascript:void(0)" data-toggle="dropdown">更多分享<i class="fa fa-caret-down"></i></a>
+                        <ul class="dropdown-menu arrow-top">
+                            <li><a href="http://cwb.assets.jianshu.io/notes/images/4732925/weibo/image_ca4538a9cd83.jpg" target="_blank" data-name="changweibo"><i class="fa fa-arrow-circle-o-down"></i> 下载长微博图片</a></li>
+                            <li>
+                                <a data-name="tweibo" href="javascript:void(function(){var d=document,e=encodeURIComponent,r='http://share.v.t.qq.com/index.php?c=share&amp;a=index&amp;url='+e('http://www.jianshu.com/p/26ff5c0bfe6a')+'&amp;title='+e('推荐 常圣言 的文章《不要做那个，不主动联系的人》（ 分享自 @jianshuio ）'),x=function(){if(!window.open(r,'tweibo','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();">
+                                    <img src="http://baijii-common.b0.upaiyun.com/social_icons/32x32/tweibo.png" alt="Tweibo"> 分享到腾讯微博
+                                </a>                </li>
+                            <li>
+                                <a data-name="qzone" href="javascript:void(function(){var d=document,e=encodeURIComponent,r='http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+e('http://www.jianshu.com/p/26ff5c0bfe6a')+'&amp;title='+e('推荐 常圣言 的文章《不要做那个，不主动联系的人》'),x=function(){if(!window.open(r,'qzone','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();">
+                                    <img src="http://baijii-common.b0.upaiyun.com/social_icons/32x32/qzone.png" alt="Qzone"> 分享到QQ空间
+                                </a>                </li>
+                            <li>
+                                <a data-name="twitter" href="javascript:void(function(){var d=document,e=encodeURIComponent,r='https://twitter.com/share?url='+e('http://www.jianshu.com/p/26ff5c0bfe6a')+'&amp;text='+e('推荐 常圣言 的文章《不要做那个，不主动联系的人》（ 分享自 @jianshucom ）')+'&amp;related='+e('jianshucom'),x=function(){if(!window.open(r,'twitter','toolbar=0,resizable=1,scrollbars=yes,status=1,width=600,height=600'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();">
+                                    <img src="http://baijii-common.b0.upaiyun.com/social_icons/32x32/twitter.png" alt="Twitter"> 分享到Twitter
+                                </a>                </li>
+                            <li>
+                                <a data-name="facebook" href="javascript:void(function(){var d=document,e=encodeURIComponent,r='https://www.facebook.com/dialog/share?app_id=483126645039390&amp;display=popup&amp;href=http://www.jianshu.com/p/26ff5c0bfe6a',x=function(){if(!window.open(r,'facebook','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();">
+                                    <img src="http://baijii-common.b0.upaiyun.com/social_icons/32x32/facebook.png" alt="Facebook"> 分享到Facebook
+                                </a>                </li>
+                            <li>
+                                <a data-name="google_plus" href="javascript:void(function(){var d=document,e=encodeURIComponent,r='https://plus.google.com/share?url='+e('http://www.jianshu.com/p/26ff5c0bfe6a'),x=function(){if(!window.open(r,'google_plus','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})();">
+                                    <img src="http://baijii-common.b0.upaiyun.com/social_icons/32x32/google_plus.png" alt="Google plus"> 分享到Google+
+                                </a>                </li>
+                            <li>
+                                <a data-name="douban" href="javascript:void(function(){var d=document,e=encodeURIComponent,s1=window.getSelection,s2=d.getSelection,s3=d.selection,s=s1?s1():s2?s2():s3?s3.createRange().text:'',r='http://www.douban.com/recommend/?url='+e('http://www.jianshu.com/p/26ff5c0bfe6a')+'&amp;title='+e('不要做那个，不主动联系的人')+'&amp;sel='+e(s)+'&amp;v=1',x=function(){if(!window.open(r,'douban','toolbar=0,resizable=1,scrollbars=yes,status=1,width=450,height=330'))location.href=r+'&amp;r=1'};if(/Firefox/.test(navigator.userAgent)){setTimeout(x,0)}else{x()}})()">
+                                    <img src="http://baijii-common.b0.upaiyun.com/social_icons/32x32/douban.png" alt="Douban"> 分享到豆瓣
+                                </a>                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="comments" class="comment-list clearfix">
+                <div class="comment-head clearfix">
+                    181条评论
+          <span class="order">
+            （
+            <a data-order="asc" class="active" href="javascript:void(0)">按时间正序</a>·
+            <a data-order="desc" href="javascript:void(0)">按时间倒序</a>·
+            <a data-order="likes_count" href="javascript:void(0)">按喜欢排序</a>
+            ）
+          </span>
+                    <a href="javascript:void(null)" class="goto-comment pull-right"><i class="fa fa-pencil"></i>添加新评论</a>
+                </div>
+                <div id="comment-list">
+
+
+                    <div class="note-comment clearfix" id="comment-3063789">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/99b77c2c377d">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2415311/291afe90302a.jpg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/99b77c2c377d">离散才看荒凉</a>
+                            </p>
+        <span class="reply-time">
+          <small>2 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3063789#comment-3063789">2016.07.10 11:53</a></span>
+                            </div>
+                            <p>有时候，不联系，反而是最好的</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3063789" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2415311" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3063789/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3063789/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3063789" data-nickname="离散才看荒凉" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3064207" data-id="3064207">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/99b77c2c377d" class="maleskine-author" target="_blank" data-user-slug="99b77c2c377d">@离散才看荒凉</a> 也许吧
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3064207/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3064207/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3063789" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3064207#comment-3064207">2016.07.10 12:34</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3063789" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3064903">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/8304b294cb2f">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2362103/7ad48c928eb9?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/8304b294cb2f">嘞嘞</a>
+                            </p>
+        <span class="reply-time">
+          <small>3 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3064903#comment-3064903">2016.07.10 13:40</a></span>
+                            </div>
+                            <p>不联系就是不在乎-_-||</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3064903" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(0)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2362103" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3064903/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3064903/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3064903" data-nickname="嘞嘞" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list hide">
+
+                                <div data-state="remaining-child-comments"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3066535">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/cbc50f84b5bc">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2162038/d03320d3d063.jpeg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/cbc50f84b5bc">半醉梦醒时</a>
+                            </p>
+        <span class="reply-time">
+          <small>4 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3066535#comment-3066535">2016.07.10 16:46</a></span>
+                            </div>
+                            <p>主动久了   慢慢就累</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3066535" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2162038" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3066535/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3066535/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3066535" data-nickname="半醉梦醒时" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3067058" data-id="3067058">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/cbc50f84b5bc" class="maleskine-author" target="_blank" data-user-slug="cbc50f84b5bc">@半醉梦醒时</a> 是啊。但是对特别的人还是主动一下吧
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3067058/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3067058/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3066535" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3067058#comment-3067058">2016.07.10 17:46</a></span>
+
+                                    </div>
+                                </div>
+                                <div class="child-comment" id="comment-3075805" data-id="3075805">
+                                    <p>
+                                        <a class="blue-link" href="/users/45a7825feff0">只愿住在你心里</a>：
+                                        <a href="/users/52c7157f6cb0" class="maleskine-author" target="_blank" data-user-slug="52c7157f6cb0">@常圣言</a> 还是要两个人互动的，不能一直是一个人主动吧，只是谁先主动罢了
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1689053" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3075805/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3075805/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3066535" data-nickname="只愿住在你心里" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3075805#comment-3075805">2016.07.11 11:39</a></span>
+
+                                    </div>
+                                </div>
+                                <div class="child-comment" id="comment-3077135" data-id="3077135">
+                                    <p>
+                                        <a class="blue-link" href="/users/7ecb12b579d6">泽泽_2010</a>：
+                                        <a href="/users/45a7825feff0" class="maleskine-author" target="_blank" data-user-slug="45a7825feff0">@只愿住在你心里</a>  是的，双方都要主动才行，
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1018668" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3077135/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3077135/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3066535" data-nickname="泽泽_2010" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3077135#comment-3077135">2016.07.11 13:35</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3066535" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073208">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/c90cdc9eaf14">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2307105/18a0fa13ba3c.jpeg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/c90cdc9eaf14">愿你安好呀</a>
+                            </p>
+        <span class="reply-time">
+          <small>5 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073208#comment-3073208">2016.07.11 07:21</a></span>
+                            </div>
+                            <p>当发现自己总是主动的那一个的时候心里会很失落的</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073208" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(0)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2307105" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073208/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073208/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073208" data-nickname="愿你安好呀" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073504" data-id="3073504">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/c90cdc9eaf14" class="maleskine-author" target="_blank" data-user-slug="c90cdc9eaf14">@愿你安好呀</a> 是啊，需要回应
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073504/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073504/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073208" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073504#comment-3073504">2016.07.11 08:10</a></span>
+
+                                    </div>
+                                </div>
+                                <div class="child-comment" id="comment-3075039" data-id="3075039">
+                                    <p>
+                                        <a class="blue-link" href="/users/7a49d20deb9b">城管打人啦</a>：
+                                        很对。
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1869227" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3075039/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3075039/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073208" data-nickname="城管打人啦" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3075039#comment-3075039">2016.07.11 10:41</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073208" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073221">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/1278c2823ca8">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2439000/d3245c2bd02f?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/1278c2823ca8">DD好脾气</a>
+                            </p>
+        <span class="reply-time">
+          <small>6 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073221#comment-3073221">2016.07.11 07:25</a></span>
+                            </div>
+                            <p>还是要看情况了！情侣之间不主动联系一定不是好事！朋友之间不见得非要主动联系！有些感情及时好久不联系也在联系的时候还是很近！</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073221" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(0)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2439000" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073221/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073221/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073221" data-nickname="DD好脾气" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073502" data-id="3073502">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/1278c2823ca8" class="maleskine-author" target="_blank" data-user-slug="1278c2823ca8">@DD好脾气</a> 哈哈，说不好
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073502/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073502/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073221" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073502#comment-3073502">2016.07.11 08:09</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073221" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073318">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/1fdc6cedd3c1">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2082266/2c4b560d4de9?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/1fdc6cedd3c1">G道无言</a>
+                            </p>
+        <span class="reply-time">
+          <small>8 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073318#comment-3073318">2016.07.11 07:42</a></span>
+                            </div>
+                            <p>感慨颇深，其实，很多东西，不经意间就失去了</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073318" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2082266" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073318/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073318/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073318" data-nickname="G道无言" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073501" data-id="3073501">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/1fdc6cedd3c1" class="maleskine-author" target="_blank" data-user-slug="1fdc6cedd3c1">@G道无言</a> 是啊
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073501/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073501/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073318" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073501#comment-3073501">2016.07.11 08:09</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073318" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073379">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/ccb957f44747">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2451191/2a53a317d766?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/ccb957f44747">静一然</a>
+                            </p>
+        <span class="reply-time">
+          <small>9 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073379#comment-3073379">2016.07.11 07:52</a></span>
+                            </div>
+                            <p>风不动，云却在动。</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073379" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2451191" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073379/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073379/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073379" data-nickname="静一然" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list hide">
+
+                                <div data-state="remaining-child-comments"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073427">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/d90629647d15">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2057942/fa75dc136631.jpeg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/d90629647d15">青柠向晚</a>
+                            </p>
+        <span class="reply-time">
+          <small>10 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073427#comment-3073427">2016.07.11 07:58</a></span>
+                            </div>
+                            <p>主动有时候要分人的，分情况的。</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073427" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2057942" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073427/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073427/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073427" data-nickname="青柠向晚" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073499" data-id="3073499">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        @青柠向左岸 嗯
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073499/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073499/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073427" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073499#comment-3073499">2016.07.11 08:09</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073427" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073491">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/544db2f8cd26">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2315375/3cd390e3968d.jpeg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/544db2f8cd26">院长出院了</a>
+                            </p>
+        <span class="reply-time">
+          <small>11 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073491#comment-3073491">2016.07.11 08:08</a></span>
+                            </div>
+                            <p>我对一个一起长大的堂妹一直都是我主动联系，没有一次是她主动的，我还应该继续主动下去吗</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073491" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2315375" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073491/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073491/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073491" data-nickname="院长出院了" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073498" data-id="3073498">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/544db2f8cd26" class="maleskine-author" target="_blank" data-user-slug="544db2f8cd26">@院长出院了</a> 主动啊，看情况吧。别因为这事断了联系
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073498/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073498/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073491" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073498#comment-3073498">2016.07.11 08:09</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073491" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073513">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/dafe25993575">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2349291/28e999840210?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/dafe25993575">玥子</a>
+                            </p>
+        <span class="reply-time">
+          <small>12 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073513#comment-3073513">2016.07.11 08:12</a></span>
+                            </div>
+                            <p>唉，我就属于十分被动的人。从小性格内向，现在虽然好些，但还是不喜欢主动接触人。</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073513" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2349291" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073513/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073513/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073513" data-nickname="玥子" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073555" data-id="3073555">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/dafe25993575" class="maleskine-author" target="_blank" data-user-slug="dafe25993575">@玥子</a> 我最讨厌被动的了<img src="http://assets.jianshu.io/assets/emojis/joy.png" alt=":joy:" title=":joy:" class="emoji" width="20" height="20">
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073555/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073555/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073513" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073555#comment-3073555">2016.07.11 08:19</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073513" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073615">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/141d38f747e1">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/1802159/e171c231b625.jpg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/141d38f747e1">七六爷</a>
+                            </p>
+        <span class="reply-time">
+          <small>13 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073615#comment-3073615">2016.07.11 08:27</a></span>
+                            </div>
+                            <p>对！我也觉得那是屁话！那些说几年不联系依然是朋友分情况 通常小学同学 发小 见面无非家里玩那些。如果不联系不主动，自己什么对方都不知道，也不关心和陌生人有什么区别</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073615" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(2)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="1802159" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073615/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073615/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073615" data-nickname="七六爷" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073884" data-id="3073884">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/141d38f747e1" class="maleskine-author" target="_blank" data-user-slug="141d38f747e1">@七六爷</a> 不联系见了都不知道说啥
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073884/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073884/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073615" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073884#comment-3073884">2016.07.11 08:52</a></span>
+
+                                    </div>
+                                </div>
+                                <div class="child-comment" id="comment-3074011" data-id="3074011">
+                                    <p>
+                                        <a class="blue-link" href="/users/141d38f747e1">七六爷</a>：
+                                        <a href="/users/52c7157f6cb0" class="maleskine-author" target="_blank" data-user-slug="52c7157f6cb0">@常圣言</a> 有时候觉得和一个人遇见是幸运，其实最难得的是分别后别来无恙
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1802159" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3074011/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3074011/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073615" data-nickname="七六爷" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3074011#comment-3074011">2016.07.11 09:06</a></span>
+
+                                    </div>
+                                </div>
+                                <div class="child-comment" id="comment-3074128" data-id="3074128">
+                                    <p>
+                                        <a class="blue-link" href="/users/f01ed93d4677">破烂哎</a>：
+                                        <a href="/users/141d38f747e1" class="maleskine-author" target="_blank" data-user-slug="141d38f747e1">@七六爷</a> 这还是要分人的每个人性格不同脾气不同就像我有个朋友几年不要见面，没有联系方式我们再见面还是和以前一样，可是呢有的朋友就不这样了，我们再见面就不说话，像陌生人，
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="2211212" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3074128/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3074128/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073615" data-nickname="破烂哎" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3074128#comment-3074128">2016.07.11 09:18</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+            <span>
+              还有 <span class="count">2</span> 条评论，
+              <a class="blue-link" data-id="3073615" data-max-id="3076127" data-action="load-children-comments" href="javascript:void(null)">展开查看</a>
+            </span>
+          <span class="pull-right">
+            <a data-id="3073615" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073619">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/dd02308408f1">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2026395/0a99a6af7aae?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/dd02308408f1">燕东</a>
+                            </p>
+        <span class="reply-time">
+          <small>14 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073619#comment-3073619">2016.07.11 08:27</a></span>
+                            </div>
+                            <p>赞赞赞</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073619" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(0)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2026395" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073619/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073619/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073619" data-nickname="燕东" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073879" data-id="3073879">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/dd02308408f1" class="maleskine-author" target="_blank" data-user-slug="dd02308408f1">@燕东</a> <img src="http://assets.jianshu.io/assets/emojis/hibiscus.png" alt=":hibiscus:" title=":hibiscus:" class="emoji" width="20" height="20">
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073879/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073879/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073619" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073879#comment-3073879">2016.07.11 08:52</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073619" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073629">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/8b1a58b73fda">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/1924870/f8627e82aec8?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/8b1a58b73fda">孓虫</a>
+                            </p>
+        <span class="reply-time">
+          <small>15 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073629#comment-3073629">2016.07.11 08:28</a></span>
+                            </div>
+                            <p>看完后，想了想。不经意走了些人，不经意的明白了些什么。主动会累，被动会失。</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073629" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(1)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="1924870" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073629/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073629/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073629" data-nickname="孓虫" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073876" data-id="3073876">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/8b1a58b73fda" class="maleskine-author" target="_blank" data-user-slug="8b1a58b73fda">@孓虫</a> 所以自己看着办吧<img src="http://assets.jianshu.io/assets/emojis/stuck_out_tongue_winking_eye.png" alt=":stuck_out_tongue_winking_eye:" title=":stuck_out_tongue_winking_eye:" class="emoji" width="20" height="20">
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073876/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073876/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073629" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073876#comment-3073876">2016.07.11 08:52</a></span>
+
+                                    </div>
+                                </div>
+                                <div class="child-comment" id="comment-3074094" data-id="3074094">
+                                    <p>
+                                        <a class="blue-link" href="/users/f01ed93d4677">破烂哎</a>：
+                                        <a href="/users/8b1a58b73fda" class="maleskine-author" target="_blank" data-user-slug="8b1a58b73fda">@孓虫</a> 任何事，我们都把握不了，
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="2211212" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3074094/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3074094/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073629" data-nickname="破烂哎" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3074094#comment-3074094">2016.07.11 09:16</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073629" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073638">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/0edefa2fc3a8">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/2331308/e570662fb407?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/0edefa2fc3a8">我艹我这个胖子</a>
+                            </p>
+        <span class="reply-time">
+          <small>16 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073638#comment-3073638">2016.07.11 08:30</a></span>
+                            </div>
+                            <p>事无绝对，你还是年轻</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073638" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(2)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="2331308" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073638/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073638/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073638" data-nickname="我艹我这个胖子" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073861" data-id="3073861">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/0edefa2fc3a8" class="maleskine-author" target="_blank" data-user-slug="0edefa2fc3a8">@我艹我这个胖子</a> <img src="http://assets.jianshu.io/assets/emojis/relieved.png" alt=":relieved:" title=":relieved:" class="emoji" width="20" height="20"><img src="http://assets.jianshu.io/assets/emojis/smirk.png" alt=":smirk:" title=":smirk:" class="emoji" width="20" height="20">对，还年轻
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073861/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073861/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073638" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073861#comment-3073861">2016.07.11 08:51</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073638" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="note-comment clearfix" id="comment-3073657">
+                        <div class="content">
+                            <div class="meta-top">
+                                <a class="avatar" href="/users/d1653089565e">
+                                    <img src="http://upload.jianshu.io/users/upload_avatars/1643225/fee596216179.jpeg?imageMogr/thumbnail/90x90/quality/100" alt="100">
+                                </a>        <p>
+                                <a class="author-name" href="/users/d1653089565e">好好先生Mrhao</a>
+                            </p>
+        <span class="reply-time">
+          <small>17 楼 · </small>
+          <a href="/p/26ff5c0bfe6a/comments/3073657#comment-3073657">2016.07.11 08:32</a></span>
+                            </div>
+                            <p>仁者见仁智者见智，你是主动的人就主动点，要是被动的话也不见得会因为这失去联系。</p>
+                            <div class="comment-footer clearfix text-right">
+                                <a data-id="3073657" class="like pull-left" href="javascript:void(0)">
+                                    <i class="fa fa-heart-o"></i>喜欢<span>(2)</span>
+                                </a>        <div class="dropdown report" data-commenter-id="1643225" style="display: none;">
+                                <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                <ul class="dropdown-menu arrow-top">
+                                    <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073657/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                    <li><a data-toggle="modal" data-url="/comments/3073657/abuse_reports" href="#report-modal">其他</a></li>
+                                </ul>
+                            </div>
+
+                                <a data-id="3073657" data-nickname="好好先生Mrhao" class="reply" href="javascript:void(0)">回复</a>
+
+
+                            </div>
+                            <div class="child-comment-list ">
+                                <div class="child-comment" id="comment-3073859" data-id="3073859">
+                                    <p>
+                                        <a class="blue-link" href="/users/52c7157f6cb0">常圣言</a>：
+                                        <a href="/users/d1653089565e" class="maleskine-author" target="_blank" data-user-slug="d1653089565e">@好好先生Mrhao</a> 被动人家都懒得理你。<img src="http://assets.jianshu.io/assets/emojis/joy.png" alt=":joy:" title=":joy:" class="emoji" width="20" height="20">
+                                    </p>
+                                    <div class="child-comment-footer text-right clearfix">
+                                        <div class="dropdown report" data-commenter-id="1552009" style="display: none;">
+                                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
+                                            <ul class="dropdown-menu arrow-top">
+                                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073859/abuse_reports?type=ad">广告及垃圾信息</a></li>
+                                                <li><a data-toggle="modal" data-url="/comments/3073859/abuse_reports" href="#report-modal">其他</a></li>
+                                            </ul>
+                                        </div>
+                                        <a data-id="3073657" data-nickname="常圣言" class="reply" href="javascript:void(null)">回复</a>
+
+
+      <span class="reply-time pull-left">
+        <a href="/p/26ff5c0bfe6a/comments/3073859#comment-3073859">2016.07.11 08:50</a></span>
+
+                                    </div>
+                                </div>
+
+                                <div data-state="remaining-child-comments"></div>
+                                <div class="comment-toolbar clearfix">
+          <span class="pull-right">
+            <a data-id="3073657" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
+          </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <p class="load-more">
+                        <a class="blue-link" data-type="html" data-action="load-comments" data-remote="true" href="/notes/4732925/comments?max_id=3077136&amp;order=asc&amp;page=2">加载更多 <i class="fa fa-arrow-down"></i></a>
+                    </p>
+                </div>
+                <form class="new_comment" id="new_comment" data-type="json" action="/notes/4732925/comments" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
+                    <div class="comment-text">
+                        <textarea maxlength="2000" placeholder="写下你的评论…" class="mousetrap" ></textarea>
+                        <div>
+                            <input type="submit" name="commit" value="发 表" class="btn btn-info" data-disable-with="提交中...">
+                            <div class="emoji">
+                                <a href="#emoji-modal" data-toggle="modal"><i class="fa fa-smile-o"></i></a>
+
+                            </div>
+
+                            <span class="hotkey">Ctrl+Enter 发表</span>
+                            <span class="warning" style="display: none"><i class="fa fa-exclamation-circle"></i><span class="warning-text"></span></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="fixed-btn">
+        <a class="go-top hide-go-top" href="#"> <i class="fa fa-angle-up"></i></a>
+        <a class="qrcode" data-target="#bottom-qrcode" data-toggle="modal" href="javascript:void(0)"><i class="fa fa-qrcode"></i></a>
+        <a class="writer" href="/writer#/" data-toggle="tooltip" data-placement="left" title="写篇文章"><i class="fa fa-pencil"></i></a>
+        <!-- qrcode modal -->
+        <div id="bottom-qrcode" class="modal panel-modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <h4>下载简书移动应用</h4>
+            <div class="panel-body"><img src="http://cdn0.jianshu.io/assets/app-page/download-app-qrcode-85008f146773a25ce86bcc4d7858af68.png" alt="Download app qrcode" /></div>
+        </div>
+    </div>
+
+
+</body>
+</html>
