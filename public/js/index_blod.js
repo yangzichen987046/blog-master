@@ -111,6 +111,7 @@ $(window).load(function(){
     })
 
 
+
     $(document).on('click','[data-action="delete-notebook"]',function(){
 
         $.ajax({
@@ -131,7 +132,32 @@ $(window).load(function(){
        $("body").append("<div class='modal-backdrop fade in' style='opacity: 1; background: rgb(255, 255, 255);'></div>")
         $(".rename-notebook-modal").show();
         $(".rename-notebook-modal").addClass("in");
+
+        var notebook_name=$(this).parent().parent().parent().find(".notebook-name span").html()
+        $(".input-large.notebook-input").val(notebook_name)
+
+        $(".input-large.notebook-input").focus();
+        $(".input-large.notebook-input").select();
     });
+
+
+
+
+
+    $(document).on('click','[data-action="submit-rename-notebook"]',function(){
+         var notebook_name=$("#notebook_name").val();
+        $.ajax({
+            type: 'PUT',
+            url: "/post/"+notebook_id,
+            data:{notebook_name:notebook_name},
+
+        })
+            .done(function (results) {
+                window.location.href='/post'
+            })
+
+    });
+
 
 
 

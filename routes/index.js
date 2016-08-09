@@ -6,6 +6,9 @@ var crypto = require('crypto'),
     Comment = require('../models/comment.js');
     Second_Comment = require('../models/second_comment.js');
     Notebook = require('../models/notebook.js');
+var Geetest = require('../gt-sdk');
+
+
 
 module.exports = function(app) {
     app.get('/', function (req, res) {
@@ -28,6 +31,28 @@ module.exports = function(app) {
             });
         });
     });
+
+
+
+
+    var pcGeetest = new Geetest({
+        privateKey: 'b843d5acde6d275aacc074f359facd8a',
+        publicKey: 'af1d53486ab74097189e3e38989f54e6'
+    });
+    app.get("/pc-geetest/register", function (req, res) {
+
+        // 向极验申请一次验证所需的challenge
+        pcGeetest.register(function (data) {
+            res.send(JSON.stringify({
+                gt: pcGeetest.publicKey,
+                challenge: data.challenge,
+                success: data.success
+            }));
+        });
+    });
+
+
+
 
     app.get('/reg', checkNotLogin);
     app.get('/reg', function (req, res) {
@@ -78,6 +103,8 @@ module.exports = function(app) {
 
     app.get('/login', checkNotLogin);
     app.get('/login', function (req, res) {
+
+
         res.render('login', {
             title: '登录',
             user: req.session.user,
@@ -88,6 +115,11 @@ module.exports = function(app) {
 
     app.post('/login', checkNotLogin);
     app.post('/login', function (req, res) {
+
+
+
+
+
         //生成密码的 md5 值
         var md5 = crypto.createHash('md5'),
             password = md5.update(req.body.password).digest('hex');
@@ -215,6 +247,24 @@ module.exports = function(app) {
             });
         });
     });
+
+
+
+    app.put('/post/:notebook_id', checkLogin);
+    app.put('/post/:notebook_id',function(req,res){
+        var currentUser = req.session.user;
+        var notebook_id=req.params.notebook_id;
+        var notebook_name=req.body.notebook_name;
+        Notebook.updata_notebook_name(currentUser.name, notebook_id,notebook_name, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('back');
+            }
+            req.flash('success', '修改成功!');
+            res.redirect('/');
+        });
+    });
+
 
 
 

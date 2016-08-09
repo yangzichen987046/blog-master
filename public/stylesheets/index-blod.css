@@ -159,23 +159,24 @@ p {
 .navigation .search-form {
     margin: 0;
 }
-
-
+input.search-query:focus{background: #fff !important;}
+input.search-query:hover{background: #fff !important;}
 input.search-query {
-    padding-right: 14px;
+    outline: none;
+    padding-right: 14px !important;
 
-    padding-left: 14px;
-    border: 1px solid #cccccc;
-    margin-bottom: 0;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    height: 20px;
-    padding: 4px 6px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #555555;
-    vertical-align: middle;
+    padding-left: 14px !important;
+    border: 1px solid #cccccc !important;
+    margin-bottom: 0 !important;
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;
+    border-radius: 15px !important;
+    height: 20px !important;
+    padding: 4px 6px !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: #555555 !important;
+    vertical-align: middle !important;
 }
 .input-medium {
     width: 150px;
@@ -698,10 +699,27 @@ button[data-color=green] {
     position: relative;
     line-height: 27px;
 }
+.gt_widget.gt_hide {
+    display: none;
+    opacity: 0;
+}
+.gt_widget.gt_show {
+    display: block !important;
+    opacity: 1;
+    zoom: 1;
+    z-index: 398;
+}
+.gt_holder .gt_widget {
+    position: absolute;
+    left: 0 !important;
+    margin-left: -15px;
+    _margin-left: 0;
+    bottom: 28px;
 
-
-
-
-
+}
+.gt_holder .gt_slider {
+    left: 0 !important;
+}
+.gt_holder{margin-bottom: 15px;}
 
 

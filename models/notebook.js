@@ -112,3 +112,33 @@ Notebook.remove_notebook_id = function(name,time, callback) {
         });
     });
 };
+
+
+Notebook.updata_notebook_name = function(name, time,notebook , callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('notebooks', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "name": name,
+                "time": time
+            }, {
+                $set: {notebook: notebook}
+            }, function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
