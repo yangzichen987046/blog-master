@@ -419,7 +419,11 @@ select, textarea, input[type="text"], input[type="password"], input[type="dateti
     background: #15a7f0;
 }
 
-
+.btn-info {
+    color: white;
+    border-color: #15a7f0;
+    background: #15a7f0;
+}
 
 
 
