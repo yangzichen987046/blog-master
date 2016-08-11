@@ -11,29 +11,26 @@
 
     </style>
     <script>
-        $(function() {
-            $( "#sortable" ).sortable({
-                revert: true,
-                update: function() {
-                    console.log(1)
+       var s=[]
+       for(i=0;i<11;i++){
 
-                }
-            });
+           s.push(i)
 
-            $( "ul, li" ).disableSelection();
-        });
+       }
+       var arr=[
+           {"name":"LiLei","age":19,"sex":"male"},
+           {"name":"HanMei","age":18,"sex":"famale"}
+       ]
+       var str = JSON.stringify(arr);
+        console.log(str)
+       var newArr = JSON.parse(str);
+       console.log(str.length)
+       console.log(newArr.length)
     </script>
 </head>
 <body>
 
 
-<ul id="sortable">
-    <li class="">Item 1</li>
-    <li class="">Item 2</li>
-    <li class="">Item 3</li>
-    <li class="">Item 4</li>
-    <li class="">Item 5</li>
-</ul>
 
 
 </body>
