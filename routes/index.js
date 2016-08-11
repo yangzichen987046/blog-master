@@ -266,6 +266,24 @@ module.exports = function(app) {
     });
 
 
+    app.put('/post', checkLogin);
+    app.put('/post',function(req,res){
+        var currentUser = req.session.user;
+        var data=req.body.data;
+
+        Notebook.updata_seq(currentUser.name,data,  function (err) {
+            if (err) {
+                console.log("xxx")
+                req.flash('error', err);
+                return res.redirect('back');
+            }
+
+            res.redirect('/');
+        });
+
+
+    });
+
 
 
     app.get('/post/:notebook_id', checkLogin);
@@ -394,16 +412,32 @@ module.exports = function(app) {
     app.post('/post/:notebook_id/:name/:day/:title', checkLogin);
     app.post('/post/:notebook_id/:name/:day/:title', function (req, res) {
         var currentUser = req.session.user;
-        context_length=req.body.post.length
-        Post.update(currentUser.name, req.params.day, req.params.title, req.body.post,context_length, function (err) {
-            var url = encodeURI('/u/' + req.params.name + '/' + req.params.day + '/' + req.params.title);
-            if (err) {
-                req.flash('error', err);
-                return res.redirect(url);//出错！返回文章页
-            }
-            req.flash('success', '修改成功!');
-            res.redirect(url);//成功！返回文章页
-        });
+        var notebook=req.body.notebook;
+        var notebook_title=req.body.title
+
+        if(notebook){
+            notebook = new Notebook(notebook,currentUser.name);
+
+            notebook.save(function (err) {
+
+                if (err) {
+                    req.flash('error', err);
+                    return res.redirect('/');
+                }
+                req.flash('success', '发布成功!');
+                res.redirect('/post');//发表成功跳转到主页
+            });
+        }else {
+            Post.update(currentUser.name, req.params.day, req.params.title, req.body.post,notebook_title, function (err) {
+                var url = encodeURI('/u/' + req.params.name + '/' + req.params.day + '/' + notebook_title);
+                if (err) {
+                    req.flash('error', err);
+                    return res.redirect(url);//出错！返回文章页
+                }
+                req.flash('success', '修改成功!');
+                res.redirect(url);//成功！返回文章页
+            });
+        }
     });
 
 

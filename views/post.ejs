@@ -1,5 +1,41 @@
 <%- include header %>
+<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script>
+    $(function() {
+        $( "#sortable" ).sortable({
+            revert: true,
+            update: function() {
+//                console.log($( "#sortable  .one-notebook").length)
+//                var arr = new Array();
+//                var note_name=$( "#sortable .one-notebook")
+//                for (var i=0;i<$( "#sortable .one-notebook").length;i++)
+//                {
+//                    arr.push("id:"+note_name.eq(i).attr("data-cid")+","+"seq:"+i)
+//                }
+//                console.log(arr)
+//                console.log(JSON.stringify(arr))
 
+                var datas = [];
+                var note_name=$( "#sortable .one-notebook")
+                for (var i = 0; i <$("#sortable .one-notebook").length; i++) {
+                    var data = {};
+                    data["id"] = note_name.eq(i).attr("data-cid");
+                    data["seq"] = i;
+                    datas.push(data);
+                }
+                var data=JSON.stringify(datas)
+
+                $.ajax({
+                    type: 'PUT',
+                    url: "/post",
+                    data:{data:data},
+                })
+            }
+        });
+
+        $( "ul, li" ).disableSelection();
+    });
+</script>
 <div class="nav_left">
     <div class="nav_left_top">
 
@@ -50,9 +86,9 @@
             </div>
         </div>
 
-        <ul class="nav nav-list notebooks ui-sortable">
+        <ul class="nav nav-list notebooks ui-sortable" id="sortable">
             <% notebook_all.forEach(function(notebook, index) { %>
-
+            <% if(notebook.notebook){%>
 
                 <% if(notebook.time==notebook_id){ %>
                 <li class="one-notebook item active" data-cid='<%= notebook.time %>'>
@@ -73,7 +109,7 @@
 
 
 
-
+            <% } %>
             <% }) %>
         </ul>
 
@@ -91,8 +127,8 @@
             <% posts.forEach(function(post, index) { %>
             <li class="one-note" data-model="note" data-cid="<%= post._id %>">
                 <i class="icon icon-note note-icon stop-share"></i>
-                <p class="abbreviate"></p>
-                <p class="wordage win-text">字数: <%= post.length %></p>
+                <p class="abbreviate"><%= post.post %></p>
+                <p class="wordage win-text">字数: <%= post.post.length %></p>
                 <a href="/post/<%= post.notebook_id %>/<%= post.name %>/<%= post.time.day %>/<%= post.title %>" data-type="edit" class="note-link title"> <%= post.title %></a>
                 <a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-gear"></i>

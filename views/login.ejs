@@ -107,12 +107,24 @@
 
 
 
-		$("#embed-captcha").hover(function(){
+		$("#embed-captcha").mousemove(function(){
 			$(".gt_widget").removeClass("gt_hide").addClass("gt_show")
-		},function(){
-			$(".gt_widget").removeClass("gt_show").addClass("gt_hide")
 		})
-		// 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
+
+		$("#embed-captcha").mouseleave(function(){
+			if($(".gt_slider_knob").hasClass("moving")){
+				$(".gt_widget").removeClass("gt_hide").addClass("gt_show")
+			}else {
+				setTimeout(function () {
+					$(".gt_widget").removeClass("gt_show").addClass("gt_hide")
+				}, 1000);
+			}
+		})
+
+
+
+
+			// 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
 		captchaObj.appendTo("#embed-captcha");
 		captchaObj.onReady(function () {
 			$("#wait")[0].className = "hide";

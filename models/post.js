@@ -180,8 +180,9 @@ Post.edit = function(name, day, title, callback) {
 };
 
 //更新一篇文章及其相关信息
-Post.update = function(name, day, title, post,context_length, callback) {
+Post.update = function(name, day, title, post,notebook_title,callback) {
     //打开数据库
+
     mongodb.connect(settings.url, function (err, db) {
         if (err) {
             return callback(err);
@@ -198,7 +199,7 @@ Post.update = function(name, day, title, post,context_length, callback) {
                 "time.day": day,
                 "title": title
             }, {
-                $set: {post: post,context_length:context_length}
+                $set: {post: post,title:notebook_title}
             }, function (err) {
                 db.close();
                 if (err) {
