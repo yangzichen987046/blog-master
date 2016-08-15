@@ -338,7 +338,6 @@ Post.getArchive = function(callback) {
                 if (err) {
                     return callback(err);
                 }
-                console.log(docs)
                 callback(null, docs);
             });
         });

@@ -16,7 +16,7 @@
                 <span><%= post.name %></span>
             </a>              <span data-toggle="tooltip" data-original-title="最后编辑于 2016.07.10 15:29"><%= post.time.minute %></span>
             <div>
-                <span>写了<%= post.context_length %>字</span>，<span>被720人关注</span>，<span>获得了3451个喜欢</span>
+                <span>写了<%= post.context_length %>字</span>，<span>被720人关注</span>，<span>获得了个喜欢</span>
             </div>
         </div>
         <h1 class="title"><%= post.title %></h1>
@@ -24,7 +24,7 @@
             <span class="wordage">字数<%= post.context_length %></span>
             <span class="views-count">阅读<%= post.pv %></span>
             <span class="comments-count">评论<%=post.comments.length%></span>
-            <span class="likes-count">喜欢111</span>
+            <span class="likes-count">喜欢</span>
         </div>
         <div class="show-content">
 
@@ -37,12 +37,12 @@
         <!--  Like Button -->
         <div class="like ">
             <div class="like-button">
-                <a class="like-content" data-remote="true" rel="nofollow" data-method="post" href="/notes/4732925/like">
+                <a class="like-content" data-remote="true" rel="nofollow" data-method="post">
                     <i class="fa fa-heart-o"></i>  喜欢
-                </a></div>          <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户">276</span>        </div>
+                </a></div>          <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户"></span>        </div>
         <!--  share group -->
         <div class="share-group pull-right">
-            <a href="javascript:void((function(s,d,e,r,l,p,t,z,c){var%20f='http://v.t.sina.com.cn/share/share.php?appkey=1881139527',u=z||d.location,p=['&amp;url=',e(u),'&amp;title=',e(t||d.title),'&amp;source=',e(r),'&amp;sourceUrl=',e(l),'&amp;content=',c||'gb2312','&amp;pic=',e(p||'')].join('');function%20a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width-440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else%20a();})(screen,document,encodeURIComponent,'','','http://cwb.assets.jianshu.io/notes/images/4732925/weibo/image_ca4538a9cd83.jpg', '推荐 @常圣言 的文章《不要做那个，不主动联系的人》（ 分享自 @简书 ）','http://www.jianshu.com/p/26ff5c0bfe6a','页面编码gb2312|utf-8默认gb2312'));" data-name="weibo">
+            <a>
                 <i class="fa fa-weibo"></i><span>分享到微博</span>
             </a>
             <a data-toggle="modal" href="#share-weixin-modal" data-name="weixin">
@@ -317,7 +317,21 @@
 <!--</p>-->
 
 
+<script>
+    $(".like-button").click(function(){
+        $(this).parent().toggleClass("note-liked")
+        if($(this).find("i").hasClass("fa-heart-o")){
+            $(this).find("i").removeClass("fa-heart-o").addClass("fa-heart")
+        }else{
+            $(this).find("i").removeClass("fa-heart").addClass("fa-heart-o")
+        }
 
+
+
+
+
+    })
+</script>
 
 
 <%- include article_footer %>

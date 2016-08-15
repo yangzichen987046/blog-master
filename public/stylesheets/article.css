@@ -312,6 +312,22 @@ img{    max-width: 100%;}
     background: #f6cec7;
     border-color: #f6cec7;
 }
+.meta-bottom .like.note-liked, .post .meta-bottom .like.note-liked:hover {
+    border-color: #de533c;
+    background-color: #de533c;
+}
+.meta-bottom .like.note-liked a, .post .meta-bottom .like.note-liked span, .post .meta-bottom .like.note-liked:hover a, .post .meta-bottom .like.note-liked:hover span {
+    color: white;
+}
+.meta-bottom .like.note-liked span {
+    color: white;
+}
+.meta-bottom .like.note-liked:hover a, .post .meta-bottom .like.note-liked:hover span, .post .meta-bottom .like.note-liked:hover a, .post .meta-bottom .like.note-liked:hover span {
+    color: white;
+}
+.meta-bottom .like.note-liked:hover span {
+    color: white !important;
+}
 .meta-bottom .like:hover a{
     color: #e36e5a;
 }
