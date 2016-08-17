@@ -19,6 +19,7 @@ module.exports = function(app) {
             if (err) {
                 posts = [];
             }
+
             res.render('index', {
                 title: '主页',
                 posts: posts,
@@ -36,8 +37,8 @@ module.exports = function(app) {
 
 
     var pcGeetest = new Geetest({
-        privateKey: 'b843d5acde6d275aacc074f359facd8a',
-        publicKey: 'af1d53486ab74097189e3e38989f54e6'
+        privateKey: 'af1d53486ab74097189e3e38989f54e6',
+        publicKey: 'b843d5acde6d275aacc074f359facd8a'
     });
     app.get("/pc-geetest/register", function (req, res) {
 
@@ -429,7 +430,7 @@ module.exports = function(app) {
             });
         }else {
             Post.update(currentUser.name, req.params.day, req.params.title, req.body.post,notebook_title, function (err) {
-                var url = encodeURI('/u/' + req.params.name + '/' + req.params.day + '/' + notebook_title);
+                var url = encodeURI('/');
                 if (err) {
                     req.flash('error', err);
                     return res.redirect(url);//出错！返回文章页
@@ -543,36 +544,75 @@ module.exports = function(app) {
         });
     });
 
-    app.get('/u/:name', function (req, res) {
-        var page = req.query.p ? parseInt(req.query.p) : 1;
-        //检查用户是否存在
-        User.get(req.params.name, function (err, user) {
-            if (err) {
-                req.flash('error', err);
-                return res.redirect('/');
-            }
-            if (!user) {
-                req.flash('error', '用户不存在!');
-                return res.redirect('/');
-            }
-            //查询并返回该用户第 page 页的 10 篇文章
-            Post.getTen(user.name, page, function (err, posts, total) {
+    //app.get('/u/:name', function (req, res) {
+    //    var page = req.query.p ? parseInt(req.query.p) : 1;
+    //    //检查用户是否存在
+    //    User.get(req.params.name, function (err, user) {
+    //        if (err) {
+    //            req.flash('error', err);
+    //            return res.redirect('/');
+    //        }
+    //        if (!user) {
+    //            req.flash('error', '用户不存在!');
+    //            return res.redirect('/');
+    //        }
+    //        //查询并返回该用户第 page 页的 10 篇文章
+    //        Post.getTen(user.name, page, function (err, posts, total) {
+    //            if (err) {
+    //                req.flash('error', err);
+    //                return res.redirect('/');
+    //            }
+    //            res.render('user', {
+    //                title: user.name,
+    //                posts: posts,
+    //                page: page,
+    //                isFirstPage: (page - 1) == 0,
+    //                isLastPage: ((page - 1) * 10 + posts.length) == total,
+    //                user: req.session.user,
+    //                success: req.flash('success').toString(),
+    //                error: req.flash('error').toString()
+    //            });
+    //        });
+    //    });
+    //});
+    app.get('/u/:id', checkLogin);
+    app.get('/u/:id', function (req, res) {
+        var currentUser = req.session.user;
+        if(req.session.user){
+            Post.getOne_id(req.params.id, function (err, post) {
                 if (err) {
                     req.flash('error', err);
                     return res.redirect('/');
                 }
-                res.render('user', {
-                    title: user.name,
-                    posts: posts,
-                    page: page,
-                    isFirstPage: (page - 1) == 0,
-                    isLastPage: ((page - 1) * 10 + posts.length) == total,
-                    user: req.session.user,
-                    success: req.flash('success').toString(),
-                    error: req.flash('error').toString()
+                var first_comment=post.comments.length
+                var second_comment=0;
+                for(var i=0;i<post.comments.length;i++){
+                    if(post.comments[i].second_comment){
+                        second_comment=second_comment+post.comments[i].second_comment.length
+                    }
+                }
+                comment=first_comment+second_comment
+
+
+                Post.has_like(req.params.id,currentUser.name, function (err, like) {
+                    if (err) {
+                        req.flash('error', err);
+                        return res.redirect('/');
+                    }
+
+                    res.render('article', {
+                        title: req.params.title,
+                        post: post,
+                        like:like,
+                        comment:comment,
+                        user: req.session.user,
+                        success: req.flash('success').toString(),
+                        error: req.flash('error').toString()
+                    });
                 });
             });
-        });
+        }
+
     });
 
     app.get('/u/:name/:day/:title', function (req, res) {
@@ -592,7 +632,83 @@ module.exports = function(app) {
         });
     });
 
-    app.post('/u/:name/:day/:title', function (req, res) {
+
+    app.post('/delete/like/:id', function (req, res) {
+        var currentUser = req.session.user;
+        var author_name=req.body.author_name;
+        console.log(111)
+        var date = new Date(),
+            time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+                date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())+":"+(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+        var like = {
+            name: currentUser.name,
+            time: time,
+        };
+
+
+        Post.delete_like(req.params.id, like, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+        });
+
+        User.delete_like(author_name, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+
+        });
+    });
+
+
+    app.post('/get/like/:id', function (req, res) {
+        var author_name=req.body.author_name;
+
+
+        User.like(author_name, function (err,user) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+            res.send(user);
+
+        });
+    });
+
+
+
+    app.post('/like/:id', function (req, res) {
+        var currentUser = req.session.user;
+        var author_name=req.body.author_name;
+
+        console.log(2)
+        var date = new Date(),
+            time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+                date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())+":"+(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+        var like = {
+            name: currentUser.name,
+            time: time,
+        };
+
+        Post.like(req.params.id, like, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+
+        });
+        User.add_like(author_name, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+
+        });
+    });
+
+    app.post('/u/:id', function (req, res) {
         var date = new Date(),
             time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
                 date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())+":"+(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
@@ -609,9 +725,9 @@ module.exports = function(app) {
             time: time,
             content: req.body.content
         };
-        console.log(comment.data_name,comment.data_time)
+        console.log(comment.data_name,comment.data_time,req.params.id)
         if(comment.data_name==null){
-            var newComment = new Comment(req.params.name, req.params.day, req.params.title, comment);
+            var newComment = new Comment(req.params.id, comment);
             newComment.save(function (err) {
                 if (err) {
                     req.flash('error', err);
@@ -621,7 +737,7 @@ module.exports = function(app) {
                 res.redirect('back');
             });
         }else{
-            var newComment = new Second_Comment(req.params.name, req.params.day, req.params.title, comment);
+            var newComment = new Second_Comment(req.params.id, comment);
             newComment.save(function (err) {
                 if (err) {
                     req.flash('error', err);

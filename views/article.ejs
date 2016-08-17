@@ -15,16 +15,22 @@
             <a class="author-name blue-link" href="/users/52c7157f6cb0">
                 <span><%= post.name %></span>
             </a>              <span data-toggle="tooltip" data-original-title="最后编辑于 2016.07.10 15:29"><%= post.time.minute %></span>
-            <div>
-                <span>写了<%= post.context_length %>字</span>，<span>被720人关注</span>，<span>获得了个喜欢</span>
+            <div class="detail">
+
             </div>
         </div>
         <h1 class="title"><%= post.title %></h1>
         <div class="meta-top">
-            <span class="wordage">字数<%= post.context_length %></span>
+            <span class="wordage">字数<%= post.post.length %></span>
             <span class="views-count">阅读<%= post.pv %></span>
-            <span class="comments-count">评论<%=post.comments.length%></span>
-            <span class="likes-count">喜欢</span>
+            <span class="comments-count">评论
+                <%if(comment){%>
+                <%=comment%>
+                <%}else{%>
+                0
+                <%}%>
+            </span>
+            <span class="likes-count">喜欢<%if(post.likes){%><%= post.likes.length %><%}else{%>0<%}%></span>
         </div>
         <div class="show-content">
 
@@ -34,12 +40,34 @@
 
     </div>
     <div class="meta-bottom clearfix">
-        <!--  Like Button -->
-        <div class="like ">
+
+        <% if(like){%>
+        <div class="like  note-liked ">
+        <% }else{%>
+            <div class="like ">
+        <% }%>
+
+
+
             <div class="like-button">
-                <a class="like-content" data-remote="true" rel="nofollow" data-method="post">
+
+                <% if(like){%>
+                <a class="like-content" data-remote="true" rel="nofollow" data-method="post" data-href="/like/<%= post._id %>">
+                    <i class="fa fa-heart"></i>  喜欢
+                </a>
+                <% }else{%>
+                <a class="like-content" data-remote="true" rel="nofollow" data-method="post" data-href="/like/<%= post._id %>">
                     <i class="fa fa-heart-o"></i>  喜欢
-                </a></div>          <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户"></span>        </div>
+                </a>
+                <% }%>
+
+
+                <!--<a class="like-content" data-remote="true" rel="nofollow" data-method="post" data-href="/like/<%= post._id %>">-->
+                    <!--<i class="fa fa-heart-o"></i>  喜欢-->
+                <!--</a>-->
+            </div>
+            <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户"><%if(post.likes){%><%= post.likes.length %><%}else{%>0<%}%></span>
+        </div>
         <!--  share group -->
         <div class="share-group pull-right">
             <a>
@@ -82,7 +110,12 @@
     </div>
     <div id="comments" class="comment-list clearfix">
         <div class="comment-head clearfix">
-            <%=post.comments.length%>条评论
+            <%if(comment){%>
+            <%=comment%>
+            <%}else{%>
+            0
+            <%}%>
+            条评论
           <span class="order">
             （
             <a data-order="asc" class="active" href="javascript:void(0)">按时间正序</a>·
@@ -93,7 +126,6 @@
             <a href="javascript:void(null)" class="goto-comment pull-right"><i class="fa fa-pencil"></i>添加新评论</a>
         </div>
         <div id="comment-list">
-
 
             <% post.comments.forEach(function (comment, index) { %>
 
@@ -318,14 +350,56 @@
 
 
 <script>
+    $(document).ready(function(){
+        var author_name=$(".author-name").find("span").html()
+        var url=$(".like-content").attr("data-href")
+        $.ajax({
+            type: "post",
+            url: "/get"+url,
+            data:{"author_name":author_name},
+            dataType: "json",
+            success: function(data){
+                $(".detail").html("<span>写了字</span>，<span>被0人关注</span>，<span>获得了"+data.like+"个喜欢</span>")
+
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.log('error ' + textStatus + " " + errorThrown);
+            }
+        })
+    })
+
+
     $(".like-button").click(function(){
+        var like_count=$("#likes-count").html()
+
+
         $(this).parent().toggleClass("note-liked")
         if($(this).find("i").hasClass("fa-heart-o")){
             $(this).find("i").removeClass("fa-heart-o").addClass("fa-heart")
+            $("#likes-count").html(parseInt(like_count)+1)
         }else{
             $(this).find("i").removeClass("fa-heart").addClass("fa-heart-o")
+            $("#likes-count").html(parseInt(like_count)-1)
         }
-
+        if($(this).parent().hasClass("note-liked")){
+            var url=$(".like-content").attr("data-href")
+            var author_name=$(".author-name").find("span").html()
+            $.ajax({
+                type: "post",
+                url: url,
+                data:{"author_name":author_name},
+                dataType: "json"
+            }).done(console.log(1))
+        }else{
+            var url=$(".like-content").attr("data-href")
+            var author_name=$(".author-name").find("span").html()
+            $.ajax({
+                type: "post",
+                url: "/delete"+url,
+                data:{"author_name":author_name},
+                dataType: "json"
+            }).done(console.log(2))
+        }
 
 
 

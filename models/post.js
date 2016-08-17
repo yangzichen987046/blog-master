@@ -1,6 +1,8 @@
 var mongodb = require('mongodb').Db;
     //markdown = require('markdown').markdown;
 var settings = require('../settings');
+var ObjectID = require('mongodb').ObjectID;
+
 function Post(name, head, title, tags,img, post,notebook_id) {
     this.name = name;
     this.head = head;
@@ -37,6 +39,7 @@ Post.prototype.save = function(callback) {
         comments: [],
         reprint_info: {},
         notebook_id:this.notebook_id,
+        likes:[],
         pv: 0
     };
     //打开数据库
@@ -101,6 +104,72 @@ Post.getTen = function(name, page, callback) {
         });
     });
 };
+
+Post.getOne_id = function(id, callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+            collection.findOne({
+                "_id": ObjectID(id)
+            }, function (err, doc) {
+                if (err) {
+                    db.close();
+                    return callback(err);
+                }
+                if (doc) {
+                    //每访问 1 次，pv 值增加 1
+                    collection.update({
+                        "_id": ObjectID(id)
+                    }, {
+                        $inc: {"pv": 1}
+                    }, function (err) {
+                        db.close();
+                        if (err) {
+                            return callback(err);
+                        }
+                    });
+                    callback(null, doc);//返回查询的一篇文章
+                }
+            });
+        });
+    });
+};
+
+Post.has_like = function(id,name, callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+            collection.findOne({ "_id": ObjectID(id),"likes.name":name}, function (err, doc) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                    //console.log(doc)
+                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+            });
+        });
+    });
+};
+
 
 //获取一篇文章
 Post.getOne = function(name, day, title, callback) {
@@ -178,6 +247,74 @@ Post.edit = function(name, day, title, callback) {
         });
     });
 };
+
+
+
+
+Post.like = function(id,like,callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "_id": ObjectID(id)
+            }, {
+                $push: {"likes": like}
+            }, function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
+
+
+
+Post.delete_like = function(id,like,callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "_id": ObjectID(id)
+            }, {
+                $pull: {
+                    "likes": {
+                        "name": like.name
+                    }}
+            }, function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
+
+
 
 //更新一篇文章及其相关信息
 Post.update = function(name, day, title, post,notebook_title,callback) {

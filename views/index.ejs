@@ -49,13 +49,19 @@
                         <em>·</em>
                         <span class="time" data-shared-at="2016-07-06T20:33:46+08:00"><%= post.time.minute %></span>
                     </p>
-                    <h4 class="title"><a target="_blank"  href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h4>
+                    <h4 class="title"><a target="_blank"  href="/u/<%= post._id %>"><%= post.title %></a></h4>
                     <div class="list-footer">
                         <a target="_blank" href="/p/d59ee9b0124b">
                             阅读 <%= post.pv %>
                         </a>
                         <a target="_blank" href="/p/d59ee9b0124b#comments">
-                            · 评论 <%=post.comments.length%>
+                            · 评论
+
+                            <% var second_comment=0;for(var i=0;i<post.comments.length;i++){
+                                if(post.comments[i].second_comment){
+                                    second_comment=second_comment+post.comments[i].second_comment.length
+                                }} %>
+                            <%=post.comments.length+second_comment %>
                         </a>
                         <span> · 转载  <% if (post.reprint_info.reprint_to) { %>
                             <%= post.reprint_info.reprint_to.length %>

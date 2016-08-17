@@ -1,19 +1,16 @@
 var mongodb = require('mongodb').Db;
 var settings = require('../settings');
+var ObjectID = require('mongodb').ObjectID;
 
-function Comment(name, day, title, comment) {
-    this.name = name;
-    this.day = day;
-    this.title = title;
+function Comment(id, comment) {
+    this.id = id;
     this.comment = comment;
 }
 
 module.exports = Comment;
 //储存一条留言信息
 Comment.prototype.save = function (callback) {
-    var name = this.name,
-        day = this.day,
-        title = this.title,
+    var id = this.id,
         comment = this.comment;
     //打开数据库
     mongodb.connect(settings.url, function (err, db) {
@@ -28,9 +25,7 @@ Comment.prototype.save = function (callback) {
             }
             //通过用户名，时间，以及标题查找文档，并把一条留言对象添加到该文档的conmments数组里去
             collection.update({
-                "name": name,
-                "time.day": day,
-                "title": title
+                "_id": ObjectID(id)
             }, {
                 $push: {"comments": comment}
             }, function (err) {

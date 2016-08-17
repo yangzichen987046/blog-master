@@ -349,6 +349,7 @@ img{    max-width: 100%;}
     -moz-transition: all 0.2s cubic-bezier(0.35, 0.32, 0.4, 1.18);
     -o-transition: all 0.2s cubic-bezier(0.35, 0.32, 0.4, 1.18);
     transition: all 0.2s cubic-bezier(0.35, 0.32, 0.4, 1.18);
+    cursor: pointer;
 }
 .meta-bottom .share-group>a {
     margin-right: 8px;

@@ -9,6 +9,7 @@ function User(user) {
     this.sex = user.sex;
     this.moblic = user.moblic;
     this.qq =user.qq;
+
 }
 
 module.exports = User;
@@ -26,7 +27,8 @@ User.prototype.save = function (callback) {
         sex: this.sex,
         moblic: this.moblic,
         qq: this.qq,
-        head: head
+        head: head,
+        like:0
     };
 
     //打开数据库
@@ -88,7 +90,7 @@ User.update = function(name, password, email,sex,moblic,qq, callback) {
     //打开数据库
     mongodb.connect(settings.url, function (err, db) {
         if (err) {
-            return callback(1);
+            return callback(err);
         }
         //读取 users 集合
         db.collection('users', function (err, collection) {
@@ -104,7 +106,7 @@ User.update = function(name, password, email,sex,moblic,qq, callback) {
             },function (err) {
                 db.close();
                 if (err) {
-                    return callback(3);
+                    return callback(err);
                 }
                 callback(null);
             });
@@ -113,6 +115,88 @@ User.update = function(name, password, email,sex,moblic,qq, callback) {
 };
 
 
+
+User.like = function(name,callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 users 集合
+        db.collection('users', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.findOne({
+                "name": name
+            }, function (err,user) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null,user);
+            });
+        });
+    });
+};
+
+User.add_like = function(name,callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 users 集合
+        db.collection('users', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "name": name
+            }, {
+                $inc: {"like":1}
+            },function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
+
+User.delete_like = function(name,callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 users 集合
+        db.collection('users', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "name": name
+            }, {
+                $inc: {"like":-1}
+            },function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
 //User.getUser = function(callback) {
 //    //打开数据库
 //    mongodb.connect(settings.url, function (err, db) {
