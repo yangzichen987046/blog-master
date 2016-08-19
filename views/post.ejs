@@ -114,8 +114,9 @@
         </ul>
 
         <div class="commercial">
-
-            <p>属于写作者的文集, 一个简洁而优雅的环境让你专注于书写。</p>   <div class="btn text-center" href="javascript:void(null)" data-action="recycle-mode">回收站</div></div>
+            <p>属于写作者的文集, 一个简洁而优雅的环境让你专注于书写。</p>
+            <div class="btn text-center" href="javascript:void(null)" data-action="recycle-mode">回收站</div>
+        </div>
     </div>
 
 
@@ -129,7 +130,7 @@
                 <i class="icon icon-note note-icon stop-share"></i>
                 <p class="abbreviate"><%= post.post %></p>
                 <p class="wordage win-text">字数: <%= post.post.length %></p>
-                <a href="/post/<%= post.notebook_id %>/<%= post.name %>/<%= post.time.day %>/<%= post.title %>" data-type="edit" class="note-link title"> <%= post.title %></a>
+                <a href="/post/<%= post.notebook_id %>/<%= post._id %>" data-type="edit" class="note-link title"> <%= post.title %></a>
                 <a href="javascript:void(0)" data-type="share" class="share-note dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-gear"></i>
                 </a>
@@ -171,8 +172,8 @@
         <!--正文<br/>-->
         <textarea id="kindeditor" name="post" rows="20" cols="100">
             	<%= post.post %>
-        </textarea><br/>
-        <input type="submit" value="发表"/>
+        </textarea>
+        <input type="submit" value="发表" style="position: fixed;right:15px;top:95px;"/>
     </form>
 </div>
     <%}else{%>
@@ -190,8 +191,8 @@
             <!--正文<br/>-->
         <textarea id="kindeditor" name="post" rows="20" cols="100">
 
-        </textarea><br/>
-            <input type="submit" value="发表"/>
+        </textarea>
+            <input type="submit" value="发表" style="position: fixed;right:15px;top:95px;"/>
         </form>
     </div>
     <%}%>
@@ -214,6 +215,7 @@
 
 
 <script>
+
     $(document).ready(function(){
         c_id=$(".rich-text").attr("c_id")
 

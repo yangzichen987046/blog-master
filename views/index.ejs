@@ -63,12 +63,13 @@
                                 }} %>
                             <%=post.comments.length+second_comment %>
                         </a>
-                        <span> · 转载  <% if (post.reprint_info.reprint_to) { %>
-                            <%= post.reprint_info.reprint_to.length %>
-                            <% } else { %>
-                            <%= 0 %>
-                            <% } %></span>
-                        <span> · 打赏 0</span>
+                        <!--<span> · 转载  <% if (post.reprint_info.reprint_to) { %>-->
+                            <!--<%= post.reprint_info.reprint_to.length %>-->
+                            <!--<% } else { %>-->
+                            <!--<%= 0 %>-->
+                            <!--<% } %>-->
+                        <!--</span>-->
+                        <span> · 喜欢 <%= post.likes.length %></span>
 
                     </div>
                 </div>

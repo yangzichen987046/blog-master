@@ -365,8 +365,8 @@ module.exports = function(app) {
 
     });
 
-    app.get('/post/:notebook_id/:name/:day/:title', checkLogin);
-    app.get('/post/:notebook_id/:name/:day/:title', function (req, res) {
+    app.get('/post/:notebook_id/:id', checkLogin);
+    app.get('/post/:notebook_id/:id', function (req, res) {
         var currentUser = req.session.user
         var notebook_id=req.params.notebook_id
         Notebook.getNotebook(currentUser.name, function (err,notebook_all) {
@@ -383,7 +383,7 @@ module.exports = function(app) {
                         return res.redirect('/');
                     }
 
-                    Post.edit(currentUser.name, req.params.day, req.params.title, function (err, post) {
+                    Post.edit(req.params.id, function (err, post) {
                         if (err) {
                             req.flash('error', err);
                             return res.redirect('back');
@@ -410,8 +410,8 @@ module.exports = function(app) {
     });
 
 
-    app.post('/post/:notebook_id/:name/:day/:title', checkLogin);
-    app.post('/post/:notebook_id/:name/:day/:title', function (req, res) {
+    app.post('/post/:notebook_id/:id', checkLogin);
+    app.post('/post/:notebook_id/:id', function (req, res) {
         var currentUser = req.session.user;
         var notebook=req.body.notebook;
         var notebook_title=req.body.title
@@ -429,7 +429,7 @@ module.exports = function(app) {
                 res.redirect('/post');//发表成功跳转到主页
             });
         }else {
-            Post.update(currentUser.name, req.params.day, req.params.title, req.body.post,notebook_title, function (err) {
+            Post.update(req.params.id, req.body.post,notebook_title, function (err) {
                 var url = encodeURI('/');
                 if (err) {
                     req.flash('error', err);
@@ -614,6 +614,29 @@ module.exports = function(app) {
         }
 
     });
+
+
+
+    app.get('/u/order/like/:id', function (req,res) {
+
+
+        Post.comment_desc(req.params.id, function (err, comment_desc) {
+
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+            //console.log(comment_desc.length)
+            //console.log(comment_desc[0])
+
+            console.log(comment_desc)
+            res.send(comment_desc)
+        });
+    });
+
+
+
+
 
     app.get('/u/:name/:day/:title', function (req, res) {
         Post.getOne(req.params.name, req.params.day, req.params.title, function (err, post) {

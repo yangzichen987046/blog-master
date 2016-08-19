@@ -416,7 +416,7 @@
 /* container */
 .ke-container {
 	display: block;
-	border: 1px solid #CCCCCC;
+	/*border: 1px solid #CCCCCC;*/
 	background-color: #FFF;
 	overflow: hidden;
 	margin: 0;
@@ -512,6 +512,7 @@
 	overflow: hidden;
 	text-align: center;
 	cursor: s-resize;
+	display: none;
 }
 .ke-statusbar-center-icon {
 	background-position: -0px -754px;

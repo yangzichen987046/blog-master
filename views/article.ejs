@@ -145,10 +145,13 @@
                         </span>
                     </div>
                     <p><%- comment.content %></p>
+
                     <div class="comment-footer clearfix text-right">
                         <a data-id="3073208" class="like pull-left" href="javascript:void(0)">
                             <i class="fa fa-heart-o"></i>喜欢<span>(0)</span>
-                        </a>        <div class="dropdown report" data-commenter-id="2307105" style="display: none;">
+                        </a>
+
+                        <div class="dropdown report" data-commenter-id="2307105" style="display: none;">
                             <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
                             <ul class="dropdown-menu arrow-top">
                                 <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073208/abuse_reports?type=ad">广告及垃圾信息</a></li>
@@ -158,20 +161,23 @@
 
                         <a parent_name="<%= comment.name %>" data-id="<%= comment.time %>" data-nickname="<%= comment.name %>" class="reply" href="javascript:void(0)">回复</a>
 
-
                     </div>
+
+
+
+
                     <div class="child-comment-list ">
 
                         <% if (comment.second_comment) { %>
                         <% comment.second_comment.forEach(function (second_comment, index) { %>
-
-
-
                         <div class="child-comment" id="comment-3075039" data-id="3075039">
                             <p>
                                 <a class="blue-link" href="/users/7a49d20deb9b"><%= second_comment.name %></a>：
                                 <%= second_comment.content %>
                             </p>
+
+
+
                             <div class="child-comment-footer text-right clearfix">
                                 <div class="dropdown report" data-commenter-id="1869227" style="display: none;">
                                     <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
@@ -185,14 +191,20 @@
                                 <a href="/p/26ff5c0bfe6a/comments/3075039#comment-3075039"><%= second_comment.time %></a>
                                 </span>
                             </div>
+
+
                         </div>
                         <% }) %>
+
+
+
                         <div data-state="remaining-child-comments"></div>
                         <div class="comment-toolbar clearfix">
                               <span class="pull-right">
                                 <a data-id="3073208" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
                               </span>
                         </div>
+
                         <form class="new_comment second_comment" id="new_comment"   method="post">
                             <input name="utf8" type="hidden" value="✓">
                             <div class="comment-text">
@@ -288,67 +300,6 @@
 
 
 
-
-
-
-
-<!--<p>-->
-	<!--<% if (user && (user.name == post.name)) { %>-->
-	<!--<span><a class="edit" href="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">编辑</a></span>-->
-	<!--<span><a class="edit" href="/remove/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">删除</a></span>-->
-	<!--<% } %>-->
-	<!--<% var flag = 1 %>-->
-    <!--<% if (user && (user.name != post.name)) { %>-->
-        <!--<% if ((post.reprint_info.reprint_from != undefined) && (user.name == post.reprint_info.reprint_from.name)) { %>-->
-        <!--<% flag = 0 %>-->
-        <!--<% } %>-->
-        <!--<% if (post.reprint_info.reprint_to != undefined) { %>-->
-            <!--<% post.reprint_info.reprint_to.forEach(function (reprint_to, index) { %>-->
-                <!--<% if (user.name == reprint_to.name) { %>-->
-                    <!--<% flag = 0 %>-->
-                <!--<% } %>-->
-            <!--<% }) %>-->
-        <!--<% } %>-->
-    <!--<% } else { %>-->
-        <!--<% flag = 0 %>-->
-    <!--<% } %>-->
-    <!--<% if (flag) { %>-->
-        <!--<span><a class="edit" href="/reprint/<%= post.name %>/<%= post.time.day%>/<%= post.title%>">转载</a></span>-->
-    <!--<% } %>-->
-<!--</p>-->
-
-
-<!--<p class="info">-->
-	<!--作者：<a href="/u/<%= post.name %>"><%= post.name %></a> |-->
-	<!--日期：<%= post.time.minute %>-->
-	<!--标签：-->
-	<!--<% post.tags.forEach(function (tag, index) { %>-->
-	<!--<% if (tag) { %>-->
-	<!--<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>-->
-	<!--<% } %>-->
-	<!--<% }) %>-->
-    <!--<% if (post.reprint_info.reprint_from) { %>-->
-    <!--<br><a href="/u/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>-->
-    <!--<% } %>-->
-<!--</p>-->
-
-
-<!--<div class="msg">-->
-    <!--<p><%- post.post %></p>-->
-<!--</div>-->
-
-
-<!--<p class="read">-->
-    <!--阅读：<%= post.pv %> |-->
-    <!--转载：-->
-    <!--<% if (post.reprint_info.reprint_to) { %>-->
-    <!--<%= post.reprint_info.reprint_to.length %>-->
-    <!--<% } else { %>-->
-    <!--<%= 0 %>-->
-    <!--<% } %>-->
-<!--</p>-->
-
-
 <script>
     $(document).ready(function(){
         var author_name=$(".author-name").find("span").html()
@@ -388,8 +339,8 @@
                 type: "post",
                 url: url,
                 data:{"author_name":author_name},
-                dataType: "json"
-            }).done(console.log(1))
+
+            })
         }else{
             var url=$(".like-content").attr("data-href")
             var author_name=$(".author-name").find("span").html()
@@ -397,8 +348,8 @@
                 type: "post",
                 url: "/delete"+url,
                 data:{"author_name":author_name},
-                dataType: "json"
-            }).done(console.log(2))
+
+            })
         }
 
 

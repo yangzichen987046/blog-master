@@ -16,9 +16,19 @@
 //
 //                        editor = K.create('#kindeditor');
 //            });
+            var hei=$(window).height()-(21+50+20+27);
 
             var options = {
-                uploadJson: '/uploadImg'
+                width : '100%',
+                height:hei+'px',
+                uploadJson: '/uploadImg',
+                resizeType : 1,
+                allowPreviewEmoticons : false,
+                allowImageUpload : false,
+                items : [
+                    'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                    'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|', 'emoticons', 'image', 'link']
             };
 
             KindEditor.ready(function(K) {

@@ -170,7 +170,45 @@ Post.has_like = function(id,name, callback) {
     });
 };
 
+Post.comment_desc = function(id, callback) {
+    //打开数据库
 
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+
+            collection.find({
+                "_id": ObjectID(id)
+            }, {
+                "comments": 1
+            }).sort({
+                "time": -1
+            }).toArray(function (err, doc) {
+
+
+                //console.log(doc)
+
+            //collection.findOne({
+            //    "_id": ObjectID(id)
+            //},{"comments":1}, function (err, doc) {
+
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+            });
+        });
+    });
+};
 //获取一篇文章
 Post.getOne = function(name, day, title, callback) {
     //打开数据库
@@ -220,7 +258,7 @@ Post.getOne = function(name, day, title, callback) {
 };
 
 //返回原始发表的内容（markdown 格式）
-Post.edit = function(name, day, title, callback) {
+Post.edit = function(id, callback) {
     //打开数据库
     mongodb.connect(settings.url, function (err, db) {
         if (err) {
@@ -234,9 +272,7 @@ Post.edit = function(name, day, title, callback) {
             }
             //根据用户名、发表日期及文章名进行查询
             collection.findOne({
-                "name": name,
-                "time.day": day,
-                "title": title
+                "_id": ObjectID(id)
             }, function (err, doc) {
                 db.close();
                 if (err) {
@@ -317,7 +353,7 @@ Post.delete_like = function(id,like,callback) {
 
 
 //更新一篇文章及其相关信息
-Post.update = function(name, day, title, post,notebook_title,callback) {
+Post.update = function(id, post,notebook_title,callback) {
     //打开数据库
 
     mongodb.connect(settings.url, function (err, db) {
@@ -332,9 +368,7 @@ Post.update = function(name, day, title, post,notebook_title,callback) {
             }
             //更新文章内容
             collection.update({
-                "name": name,
-                "time.day": day,
-                "title": title
+                "_id": ObjectID(id)
             }, {
                 $set: {post: post,title:notebook_title}
             }, function (err) {
@@ -725,3 +759,8 @@ Post.reprint = function(reprint_from, reprint_to, callback) {
         });
     });
 };
+
+
+
+
+

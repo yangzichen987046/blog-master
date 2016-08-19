@@ -1,6 +1,6 @@
 li{list-style: none;}
 .writer-nav-header{height:20px;background: #fff;border-bottom: 1px solid #d9d9d9;}
-.nav_right .aside{width: 16.66667%;float: left;}
+.nav_right .aside{width: 16.66667%;float: left;position: relative;  }
 .nav_right .middle{width: 25%;float: left;border-left: 1px solid #d9d9d9;
     border-right: 1px solid #d9d9d9;}
 .nav_right .main_article{width: 58%;float: left;}
@@ -41,7 +41,7 @@ li{list-style: none;}
 .commercial {
     position: absolute;
     bottom: 0;
-    width: 16.66667%;
+    width: 100%;
     color: #999999;
     font-size: 14px;
     font-weight: normal;
@@ -223,10 +223,11 @@ li{list-style: none;}
     white-space: nowrap;
     border-radius: 0;
     box-shadow: none;
+    margin-top: 20px;
 }
 .main_article {
     position: relative;
-    padding: 20px 0 0 0;
+    padding: 0px;
     overflow-y: auto;
     overflow-x: hidden;
 }
