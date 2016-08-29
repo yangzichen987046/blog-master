@@ -599,15 +599,21 @@ module.exports = function(app) {
                         req.flash('error', err);
                         return res.redirect('/');
                     }
-
-                    res.render('article', {
-                        title: req.params.title,
-                        post: post,
-                        like:like,
-                        comment:comment,
-                        user: req.session.user,
-                        success: req.flash('success').toString(),
-                        error: req.flash('error').toString()
+                    User.has_attention(post.name,currentUser.name, function (err, attention) {
+                        if (err) {
+                            req.flash('error', err);
+                            return res.redirect('/');
+                        }
+                        res.render('article', {
+                            title: req.params.title,
+                            post: post,
+                            like:like,
+                            attention:attention,
+                            comment:comment,
+                            user: req.session.user,
+                            success: req.flash('success').toString(),
+                            error: req.flash('error').toString()
+                        });
                     });
                 });
             });
@@ -617,7 +623,7 @@ module.exports = function(app) {
 
 
 
-    app.get('/u/order/like/:id', function (req,res) {
+    app.get('/u/order/desc/like/:id', function (req,res) {
 
 
         Post.comment_desc(req.params.id, function (err, comment_desc) {
@@ -629,14 +635,63 @@ module.exports = function(app) {
             //console.log(comment_desc.length)
             //console.log(comment_desc[0])
 
-            console.log(comment_desc)
+
             res.send(comment_desc)
         });
     });
 
+    app.get('/u/order/asc/like/:id', function (req,res) {
 
 
+        Post.comment_asc(req.params.id, function (err, comment_desc) {
 
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+            //console.log(comment_desc.length)
+            //console.log(comment_desc[0])
+
+
+            res.send(comment_desc)
+        });
+    });
+
+    app.post('/u/order/asc/more/like/:id', function (req,res) {
+
+        var comment_num = req.body.comment_num
+
+        Post.comment_asc_more(req.params.id,comment_num, function (err, comment_desc) {
+
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+            //console.log(comment_desc.length)
+            //console.log(comment_desc[0])
+
+
+            res.send(comment_desc)
+        });
+    });
+
+    app.post('/u/order/desc/more/like/:id', function (req,res) {
+
+        var comment_num = req.body.comment_num
+
+        Post.comment_desc_more(req.params.id,comment_num, function (err, comment_desc) {
+
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+            //console.log(comment_desc.length)
+            //console.log(comment_desc[0])
+
+
+            res.send(comment_desc)
+        });
+    });
 
     app.get('/u/:name/:day/:title', function (req, res) {
         Post.getOne(req.params.name, req.params.day, req.params.title, function (err, post) {
@@ -656,10 +711,65 @@ module.exports = function(app) {
     });
 
 
+
+    app.post('/u/remove_attention',function(req,res){
+        var author = req.body.author
+        var currentUser = req.session.user
+
+
+        User.remove_attention(author, currentUser.name, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+
+        });
+    })
+
+
+
+
+
+
+    app.post('/u/add_attention',function(req,res){
+        var author = req.body.author
+        var currentUser = req.session.user
+        var date = new Date(),
+            time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
+                date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())+":"+(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
+        var attention = {
+            name: currentUser.name,
+            time: time,
+        };
+
+        //console.log(attention)
+
+        User.add_attention(author, attention, function (err) {
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+
+        });
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     app.post('/delete/like/:id', function (req, res) {
         var currentUser = req.session.user;
         var author_name=req.body.author_name;
-        console.log(111)
         var date = new Date(),
             time = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " +
                 date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())+":"+(date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds());
@@ -738,17 +848,18 @@ module.exports = function(app) {
         var md5 = crypto.createHash('md5'),
             email_MD5 = md5.update(req.body.email.toLowerCase()).digest('hex'),
             head = "http://www.gravatar.com/avatar/" + email_MD5 + "?s=48";
+        var currentUser = req.session.user;
         var comment = {
             data_name: req.body.data_name,
             data_time: req.body.data_time,
-            name: req.body.name,
+            name: currentUser.name,
             head: head,
             email: req.body.email,
             website: req.body.website,
             time: time,
             content: req.body.content
         };
-        console.log(comment.data_name,comment.data_time,req.params.id)
+
         if(comment.data_name==null){
             var newComment = new Comment(req.params.id, comment);
             newComment.save(function (err) {
@@ -766,7 +877,7 @@ module.exports = function(app) {
                     req.flash('error', err);
                     return res.redirect('back');
                 }
-                req.flash('success', '留言成功!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+                req.flash('success', '留言成功!!');
                 res.redirect('back');
             });
         }

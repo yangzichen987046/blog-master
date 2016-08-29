@@ -629,6 +629,7 @@ button[data-color=blue]:hover, button[data-color=blue]:focus {
 .output .load-more {
     margin-bottom: 30px;
     text-align: center;
+    cursor: pointer;
 }
 .ladda-button{
     background: #e78170;

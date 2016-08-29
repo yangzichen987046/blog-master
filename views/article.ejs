@@ -3,10 +3,15 @@
 <div class="container">
     <div class="container_article">
         <div class="author-info">
-            <div class="btn btn-small btn-success follow" id="follow_user_1552009">
-                <a data-type="json" data-user-slug="52c7157f6cb0" data-remote="true" rel="nofollow" data-method="post" href="/users/52c7157f6cb0/toggle_like"><i class="fa fa-plus"></i>  <span>添加关注</span></a>
+            <% if(attention){%>
+            <div class="btn btn-small follow following" id="follow_user_1552009">
+                <a data-type="json" data-user-slug="<%= post.name %>" data-remote="true" rel="nofollow" data-method="post" id="attention"><i class="fa fa-check"></i>  <span>正在关注</span></a>
             </div>
-
+            <% }else{%>
+            <div class="btn btn-small follow btn-success" id="follow_user_1552009">
+                <a data-type="json" data-user-slug="<%= post.name %>" data-remote="true" rel="nofollow" data-method="post" id="attention"><i class="fa fa-plus"></i>  <span>添加关注</span></a>
+            </div>
+            <%}%>
             <a class="avatar" href="/users/52c7157f6cb0">
                 <img src="../../../images/14-75d944a989bbbd5b92a639698c9b4a3c.jpg" alt="100">
             </a>            <span class="label">
@@ -55,6 +60,7 @@
                 <a class="like-content" data-remote="true" rel="nofollow" data-method="post" data-href="/like/<%= post._id %>">
                     <i class="fa fa-heart"></i>  喜欢
                 </a>
+
                 <% }else{%>
                 <a class="like-content" data-remote="true" rel="nofollow" data-method="post" data-href="/like/<%= post._id %>">
                     <i class="fa fa-heart-o"></i>  喜欢
@@ -67,6 +73,11 @@
                 <!--</a>-->
             </div>
             <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户"><%if(post.likes){%><%= post.likes.length %><%}else{%>0<%}%></span>
+
+            <!--<div class="tooltip fade right in" style="display: block; top: 6947.5px; left: 524.406px;">-->
+                <!--<div class="tooltip-arrow"></div>-->
+                <!--<div class="tooltip-inner">查看所有喜欢的用户</div>-->
+            <!--</div>-->
         </div>
         <!--  share group -->
         <div class="share-group pull-right">
@@ -125,170 +136,9 @@
           </span>
             <a href="javascript:void(null)" class="goto-comment pull-right"><i class="fa fa-pencil"></i>添加新评论</a>
         </div>
-        <div id="comment-list">
-
-            <% post.comments.forEach(function (comment, index) { %>
+        <div id="comment-list" class="asc">
 
 
-            <div class="note-comment clearfix" id="comment-<%- index %>">
-                <div class="content">
-                    <div class="meta-top">
-                        <a class="avatar" href="/users/c90cdc9eaf14">
-                            <img src="<%= comment.head %>" alt="100">
-                        </a>
-                        <p>
-                            <a class="author-name" href="/users/c90cdc9eaf14"><%= comment.name %></a>
-                        </p>
-                        <span class="reply-time">
-                          <small> <%=index+2%> 楼 · </small>
-                          <a href="/p/26ff5c0bfe6a/comments/3073208#comment-3073208"><%= comment.time %></a>
-                        </span>
-                    </div>
-                    <p><%- comment.content %></p>
-
-                    <div class="comment-footer clearfix text-right">
-                        <a data-id="3073208" class="like pull-left" href="javascript:void(0)">
-                            <i class="fa fa-heart-o"></i>喜欢<span>(0)</span>
-                        </a>
-
-                        <div class="dropdown report" data-commenter-id="2307105" style="display: none;">
-                            <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
-                            <ul class="dropdown-menu arrow-top">
-                                <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3073208/abuse_reports?type=ad">广告及垃圾信息</a></li>
-                                <li><a data-toggle="modal" data-url="/comments/3073208/abuse_reports" href="#report-modal">其他</a></li>
-                            </ul>
-                        </div>
-
-                        <a parent_name="<%= comment.name %>" data-id="<%= comment.time %>" data-nickname="<%= comment.name %>" class="reply" href="javascript:void(0)">回复</a>
-
-                    </div>
-
-
-
-
-                    <div class="child-comment-list ">
-
-                        <% if (comment.second_comment) { %>
-                        <% comment.second_comment.forEach(function (second_comment, index) { %>
-                        <div class="child-comment" id="comment-3075039" data-id="3075039">
-                            <p>
-                                <a class="blue-link" href="/users/7a49d20deb9b"><%= second_comment.name %></a>：
-                                <%= second_comment.content %>
-                            </p>
-
-
-
-                            <div class="child-comment-footer text-right clearfix">
-                                <div class="dropdown report" data-commenter-id="1869227" style="display: none;">
-                                    <a class="report_comment" href="javascript:void(0)" data-toggle="dropdown">举报</a>
-                                    <ul class="dropdown-menu arrow-top">
-                                        <li><a data-type="json" data-remote="true" rel="nofollow" data-method="post" href="/comments/3075039/abuse_reports?type=ad">广告及垃圾信息</a></li>
-                                        <li><a data-toggle="modal" data-url="/comments/3075039/abuse_reports" href="#report-modal">其他</a></li>
-                                    </ul>
-                                </div>
-                                <a parent_name="<%= second_comment.name %>" data-id="<%= comment.time %>" data-nickname="<%= comment.name %>" class="reply" href="javascript:void(null)">回复</a>
-                                <span class="reply-time pull-left">
-                                <a href="/p/26ff5c0bfe6a/comments/3075039#comment-3075039"><%= second_comment.time %></a>
-                                </span>
-                            </div>
-
-
-                        </div>
-                        <% }) %>
-
-
-
-                        <div data-state="remaining-child-comments"></div>
-                        <div class="comment-toolbar clearfix">
-                              <span class="pull-right">
-                                <a data-id="3073208" class="reply" href="javascript:void(null)"><i class="fa fa-pencil"></i> 添加新回复</a>
-                              </span>
-                        </div>
-
-                        <form class="new_comment second_comment" id="new_comment"   method="post">
-                            <input name="utf8" type="hidden" value="✓">
-                            <div class="comment-text">
-
-                                <textarea maxlength="2000" placeholder="写下你的评论…" class="mousetrap" name="content" id="comment_content"></textarea>
-                                <div style="display: none;">
-                                    <% if (user) { %>
-                                    回复姓名：<input type="text" name="data_name" value="0" class="data_name"/><br />
-                                    回复时间：<input type="text" name="data_time" value="1" class="data_time"/><br />
-                                    姓名：<input type="text" name="name" value="<%= user.name %>" /><br />
-
-                                    邮箱：<input type="text" name="email" value="<%= user.email %>" /><br />
-                                    网址：<input type="text" name="website" value="/u/<%= user.name %>" /><br />
-                                    <% } else { %>
-                                    回复姓名：<input type="text" name="data_name" value="00" class="data_name"/><br />
-                                    回复时间：<input type="text" name="data_time" value="11" class="data_time"/><br />
-                                    姓名：<input type="text" name="name" /><br />
-                                    邮箱：<input type="text" name="email" /><br />
-                                    网址：<input type="text" name="website" value="http://" /><br />
-                                    <% } %>
-                                </div>
-                                <div>
-                                    <input type="submit"  value="发 表1" class="btn btn-info" data-disable-with="提交中...">
-                                    <div class="emoji">
-                                        <a href="#emoji-modal" data-toggle="modal"><i class="fa fa-smile-o"></i></a>
-
-                                    </div>
-                                    <input class="hotkey" type="submit" value="Ctrl+Enter 发表" />
-                                    <!--<span class="hotkey">Ctrl+Enter 发表</span>-->
-                                    <span class="warning" style="display: none"><i class="fa fa-exclamation-circle"></i><span class="warning-text"></span></span>
-                                </div>
-                            </div>
-                        </form>
-
-
-                        <% } else { %>
-                        <form class="new_comment second_comment" id="new_comment"   method="post">
-                            <input name="utf8" type="hidden" value="✓">
-                            <div class="comment-text">
-
-                                <textarea maxlength="2000" placeholder="写下你的评论…" class="mousetrap" name="content" id="comment_content"></textarea>
-                                <div style="display: none;">
-                                    <% if (user) { %>
-                                    回复姓名：<input type="text" name="data_name" value="0" class="data_name"/><br />
-                                    回复时间：<input type="text" name="data_time" value="1" class="data_time"/><br />
-                                    姓名：<input type="text" name="name" value="<%= user.name %>" /><br />
-                                    邮箱：<input type="text" name="email" value="<%= user.email %>" /><br />
-                                    网址：<input type="text" name="website" value="/u/<%= user.name %>" /><br />
-                                    <% } else { %>
-                                    回复姓名：<input type="text" name="data_name" value="00" class="data_name"/><br />
-                                    回复时间：<input type="text" name="data_time" value="11" class="data_time"/><br />
-                                    姓名：<input type="text" name="name" /><br />
-                                    邮箱：<input type="text" name="email" /><br />
-                                    网址：<input type="text" name="website" value="http://" /><br />
-                                    <% } %>
-                                </div>
-                                <div>
-                                    <input type="submit"  value="发 表1" class="btn btn-info" data-disable-with="提交中...">
-                                    <div class="emoji">
-                                        <a href="#emoji-modal" data-toggle="modal"><i class="fa fa-smile-o"></i></a>
-
-                                    </div>
-                                    <input class="hotkey" type="submit" value="Ctrl+Enter 发表" />
-                                    <!--<span class="hotkey">Ctrl+Enter 发表</span>-->
-                                    <span class="warning" style="display: none"><i class="fa fa-exclamation-circle"></i><span class="warning-text"></span></span>
-                                </div>
-                            </div>
-                        </form>
-                        <% } %>
-
-
-                    </div>
-
-                </div>
-            </div>
-
-
-
-            <% }) %>
-
-
-            <p class="load-more">
-                <a class="blue-link" data-type="html" data-action="load-comments" data-remote="true" href="/notes/4732925/comments?max_id=3077136&amp;order=asc&amp;page=2">加载更多 <i class="fa fa-arrow-down"></i></a>
-            </p>
         </div>
 
         <%- include comment %>
@@ -310,7 +160,7 @@
             data:{"author_name":author_name},
             dataType: "json",
             success: function(data){
-                $(".detail").html("<span>写了字</span>，<span>被0人关注</span>，<span>获得了"+data.like+"个喜欢</span>")
+                $(".detail").html("<span>写了字</span>，<span>被"+data.attentions.length+"人关注</span>，<span>获得了"+data.like+"个喜欢</span>")
 
             },
             error: function(jqXHR, textStatus, errorThrown){

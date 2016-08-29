@@ -3,7 +3,7 @@ var mongodb = require('mongodb').Db;
 var settings = require('../settings');
 var ObjectID = require('mongodb').ObjectID;
 
-function Post(name, head, title, tags,img, post,notebook_id) {
+function Post(name, head, title, tags,img, post,notebook_id,comment_num) {
     this.name = name;
     this.head = head;
     this.title = title;
@@ -11,6 +11,7 @@ function Post(name, head, title, tags,img, post,notebook_id) {
     this.img = img;
     this.post = post;
     this.notebook_id=notebook_id;
+    this.comment_num=comment_num;
 }
 
 module.exports = Post;
@@ -188,13 +189,12 @@ Post.comment_desc = function(id, callback) {
             collection.find({
                 "_id": ObjectID(id)
             }, {
-                "comments": 1
-            }).sort({
-                "time": -1
+                "comments": {"$slice":-10}
+
             }).toArray(function (err, doc) {
 
 
-                //console.log(doc)
+
 
             //collection.findOne({
             //    "_id": ObjectID(id)
@@ -209,7 +209,160 @@ Post.comment_desc = function(id, callback) {
         });
     });
 };
+
+
+Post.comment_asc = function(id, callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+
+            collection.find({
+                "_id": ObjectID(id)
+            }, {
+                "comments": {"$slice":10}
+
+            }).toArray(function (err, doc) {
+
+
+
+
+                //collection.findOne({
+                //    "_id": ObjectID(id)
+                //},{"comments":1}, function (err, doc) {
+
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+            });
+        });
+    });
+};
 //获取一篇文章
+
+
+Post.comment_asc_more = function(id,comment_num, callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+
+            collection.find({
+                "_id": ObjectID(id)
+            }, {
+                "comments": {"$slice":[Number(comment_num),10]}
+            }).toArray(function (err, doc) {
+
+
+
+                //collection.findOne({
+                //    "_id": ObjectID(id)
+                //},{"comments":1}, function (err, doc) {
+
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+            });
+        });
+    });
+};
+
+
+
+
+
+Post.comment_desc_more = function(id,comment_num, callback) {
+    //打开数据库
+    var comment_num=Number(comment_num)
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+
+            collection.find({
+                "_id": ObjectID(id)
+            }, {
+                "comments": 1
+            }).toArray(function (err, doc) {
+
+                var comments_all=doc[0].comments.length
+                var comments_less=comments_all-comment_num
+                if (comments_less<10) {
+                    //每访问 1 次，pv 值增加 1
+                    collection.find({
+                        "_id": ObjectID(id)
+                    }, {
+                        "comments": {"$slice":[0,comments_less]}
+                    }).toArray(function (err, docs) {
+                        db.close();
+                        if (err) {
+                            return callback(err);
+                        }
+                        callback(null, docs);//返回查询的一篇文章
+                    });
+
+                }else{
+                    collection.find({
+                        "_id": ObjectID(id)
+                    }, {
+                        "comments": {"$slice":[-comment_num-10,10]}
+                    }).toArray(function (err, docs) {
+                        db.close();
+                        if (err) {
+                            return callback(err);
+                        }
+                        callback(null, docs);//返回查询的一篇文章
+                    });
+                }
+            });
+        });
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Post.getOne = function(name, day, title, callback) {
     //打开数据库
     mongodb.connect(settings.url, function (err, db) {

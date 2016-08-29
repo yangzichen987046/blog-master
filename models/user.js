@@ -28,6 +28,7 @@ User.prototype.save = function (callback) {
         moblic: this.moblic,
         qq: this.qq,
         head: head,
+        attentions:[],
         like:0
     };
 
@@ -197,6 +198,110 @@ User.delete_like = function(name,callback) {
         });
     });
 };
+
+
+
+
+
+
+User.add_attention = function(author,attention,callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('users', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "name": author
+            }, {
+                $push: {"attentions": attention}
+            }, function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
+
+
+
+
+User.remove_attention = function(author,name,callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('users', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //更新文章内容
+            collection.update({
+                "name": author
+            }, {
+                $pull: {
+                    "attentions": {
+                        "name": name
+                    }}
+            }, function (err) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null);
+            });
+        });
+    });
+};
+
+
+
+
+
+
+
+User.has_attention = function(author,name, callback) {
+    //打开数据库
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('users', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+            collection.findOne({ "name":author,"attentions.name":name}, function (err, doc) {
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                //console.log(doc)
+                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+            });
+        });
+    });
+};
+
+
+
+
 //User.getUser = function(callback) {
 //    //打开数据库
 //    mongodb.connect(settings.url, function (err, db) {
