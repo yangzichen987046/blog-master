@@ -914,6 +914,43 @@ Post.reprint = function(reprint_from, reprint_to, callback) {
 };
 
 
+//likes的用户
+Post.like_detail = function(id, callback) {
+    //打开数据库
+
+    mongodb.connect(settings.url, function (err, db) {
+        if (err) {
+            return callback(err);
+        }
+        //读取 posts 集合
+        db.collection('posts', function (err, collection) {
+            if (err) {
+                db.close();
+                return callback(err);
+            }
+            //根据用户名、发表日期及文章名进行查询
+
+            collection.find({
+                "_id": ObjectID(id)
+            }, {
+                "likes": 1
+
+            }).toArray(function (err, doc) {
 
 
+
+
+                //collection.findOne({
+                //    "_id": ObjectID(id)
+                //},{"comments":1}, function (err, doc) {
+
+                db.close();
+                if (err) {
+                    return callback(err);
+                }
+                callback(null, doc);//返回查询的一篇文章（markdown 格式）
+            });
+        });
+    });
+};
 

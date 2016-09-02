@@ -467,6 +467,7 @@ module.exports = function(app) {
 
     app.post('/upload', checkLogin);
     app.post('/upload', function (req, res) {
+
         req.flash('success', '文件上传成功!');
         res.redirect('/upload');
     });
@@ -693,6 +694,27 @@ module.exports = function(app) {
         });
     });
 
+
+
+
+    app.post('/u/detail/like/:id', function (req,res) {
+
+
+        Post.like_detail(req.params.id, function (err, like_detail) {
+
+            if (err) {
+                req.flash('error', err);
+                return res.redirect('/');
+            }
+            //console.log(comment_desc.length)
+            //console.log(comment_desc[0])
+
+            res.send(like_detail)
+        });
+    });
+
+
+
     app.get('/u/:name/:day/:title', function (req, res) {
         Post.getOne(req.params.name, req.params.day, req.params.title, function (err, post) {
             if (err) {
@@ -791,6 +813,8 @@ module.exports = function(app) {
                 req.flash('error', err);
                 return res.redirect('/');
             }
+            res.send("1");
+
 
         });
     });
@@ -837,7 +861,7 @@ module.exports = function(app) {
                 req.flash('error', err);
                 return res.redirect('/');
             }
-
+            res.send("1");
         });
     });
 

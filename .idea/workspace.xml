@@ -21,50 +21,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="article.ejs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="article.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/article.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8601864">
-              <caret line="79" column="22" selection-start-line="76" selection-start-column="16" selection-end-line="79" selection-end-column="22" />
+            <state vertical-scroll-proportion="-10.068966">
+              <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/user.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="294" column="34" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="34" />
-              <folding>
-                <element signature="e#3783#4447#0" expanded="false" />
-                <element signature="e#4493#5158#0" expanded="false" />
-                <element signature="e#5968#6724#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="581" column="23" selection-start-line="581" selection-start-column="23" selection-end-line="581" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.9194631">
+              <caret line="816" column="0" selection-start-line="816" selection-start-column="0" selection-end-line="816" selection-end-column="0" />
               <folding>
                 <element signature="e#8876#10010#0" expanded="false" />
                 <element signature="e#13858#13976#0" expanded="false" />
-                <element signature="e#16259#16747#0" expanded="false" />
+                <element signature="e#16260#16748#0" expanded="false" />
+                <element signature="e#20659#21063#0" expanded="false" />
+                <element signature="e#21130#21535#0" expanded="false" />
+                <element signature="e#21995#22501#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="post.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/post.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -73,71 +52,59 @@
         <entry file="file://$PROJECT_DIR$/public/js/index_blod.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+              <caret line="1146" column="0" selection-start-line="1146" selection-start-column="0" selection-end-line="1146" selection-end-column="0" />
               <folding>
-                <element signature="e#10169#29563#0" expanded="false" />
-                <element signature="e#10878#19787#0" expanded="false" />
-                <element signature="e#20690#29052#0" expanded="false" />
-                <element signature="e#29625#38035#0" expanded="false" />
-                <element signature="e#46772#46947#0" expanded="false" />
-                <element signature="e#46985#47390#0" expanded="false" />
-                <element signature="e#47398#47464#0" expanded="false" />
-                <marker date="1472457426465" expanded="true" signature="3859:3873" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="6800:6814" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="7826:7839" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="8516:8530" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="9542:9555" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="12516:12530" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="16118:16132" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="17365:17378" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="18222:18236" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="19469:19482" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="22208:22222" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="25627:25641" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="26757:26770" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="27559:27573" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="28741:28754" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="31444:31458" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="34533:34547" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="35611:35624" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="36341:36355" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="37419:37432" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="40039:40053" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="43189:43203" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="44267:44280" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="45001:45015" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="46079:46092" placeholder="..." />
-                <marker date="1472457426465" expanded="true" signature="50566:50609" placeholder="..." />
+                <element signature="e#11034#19943#0" expanded="false" />
+                <element signature="e#20960#29322#0" expanded="false" />
+                <element signature="e#29996#38406#0" expanded="false" />
+                <element signature="e#47975#48041#0" expanded="false" />
+                <marker date="1472632282349" expanded="true" signature="4013:4027" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="6954:6968" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="7980:7993" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="8670:8684" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="9696:9709" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="12672:12686" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="16274:16288" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="17521:17534" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="18378:18392" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="19625:19638" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="22478:22492" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="25897:25911" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="27027:27040" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="27829:27843" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="29011:29024" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="31815:31829" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="34904:34918" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="35982:35995" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="36712:36726" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="37790:37803" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="40410:40424" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="43560:43574" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="44638:44651" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="45372:45386" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="46450:46463" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="51165:51208" placeholder="..." />
+                <marker date="1472632282349" expanded="true" signature="51719:51762" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="write.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/write.css">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/yzc-blod/article.html">
+      <file leaf-file-name="settings.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1212" column="39" selection-start-line="1212" selection-start-column="30" selection-end-line="1212" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/article.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="586" column="1" selection-start-line="586" selection-start-column="1" selection-end-line="586" selection-end-column="1" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,18 +113,28 @@
       <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/yzc-blod/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="48" />
+            <state vertical-scroll-proportion="-32.785713">
+              <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index-blod.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/index-blod.css">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://E:/blog-master1.1/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="631" column="20" selection-start-line="631" selection-start-column="20" selection-end-line="631" selection-end-column="20" />
+              <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="upload.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/upload.ejs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -204,7 +181,6 @@
         <option value="$PROJECT_DIR$/views/footer.ejs" />
         <option value="$PROJECT_DIR$/views/post--.ejs" />
         <option value="$PROJECT_DIR$/public/yzc-blod/index.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/gt-sdk.js" />
         <option value="$PROJECT_DIR$/views/reg.ejs" />
@@ -215,20 +191,21 @@
         <option value="$PROJECT_DIR$/models/second_comment.js" />
         <option value="$PROJECT_DIR$/views/article_header.ejs" />
         <option value="$PROJECT_DIR$/public/KindEditor/themes/default/default.css" />
-        <option value="$PROJECT_DIR$/views/header.ejs" />
         <option value="$PROJECT_DIR$/views/post.ejs" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/stylesheets/write.css" />
         <option value="$PROJECT_DIR$/models/notebook.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/index-blod.css" />
-        <option value="$PROJECT_DIR$/public/yzc-blod/test.html" />
-        <option value="$PROJECT_DIR$/models/post.js" />
         <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/public/js/index_blod.js" />
+        <option value="$PROJECT_DIR$/public/yzc-blod/test.html" />
         <option value="$PROJECT_DIR$/public/stylesheets/article.css" />
+        <option value="$PROJECT_DIR$/models/post.js" />
+        <option value="$PROJECT_DIR$/views/header.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/js/index_blod.js" />
         <option value="$PROJECT_DIR$/views/article.ejs" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -241,9 +218,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1456" />
-    <option name="height" value="916" />
+    <option name="width" value="1452" />
+    <option name="height" value="912" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -268,7 +244,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -347,41 +323,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="blog-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,10 +399,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="916" extended-state="0" />
+    <frame x="-8" y="0" width="1452" height="912" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24861111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24860725" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920793" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -498,7 +442,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/index.js</url>
-          <line>1145</line>
+          <line>1169</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -538,17 +482,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/index.js</url>
-          <line>580</line>
+          <line>581</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/js/index_blod.js</url>
-          <line>322</line>
+          <line>329</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/index.js</url>
-          <line>659</line>
+          <line>660</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -558,12 +502,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/js/index_blod.js</url>
-          <line>634</line>
+          <line>643</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/public/js/index_blod.js</url>
-          <line>792</line>
+          <line>801</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -573,120 +517,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/routes/index.js</url>
-          <line>733</line>
+          <line>755</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/index.js</url>
+          <line>678</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/gt-node-sdk-master/demo/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3571428">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/gt-node-sdk-master/demo/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14634146">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.321428">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/reg.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23651452">
-          <caret line="51" column="80" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/KindEditor/plugins/image/image.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5609756">
-          <caret line="316" column="8" selection-start-line="316" selection-start-column="8" selection-end-line="316" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/db.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/yzc-blod/js/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5607477">
-          <caret line="11174" column="41" selection-start-line="11174" selection-start-column="31" selection-end-line="11174" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/blog-master1.1/models/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/login.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="33" selection-start-line="113" selection-start-column="33" selection-end-line="113" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33247754">
-          <caret line="773" column="0" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.ssh/id_rsa">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1285521">
-          <caret line="5" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/yzc-blod/write.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="61" selection-start-line="93" selection-start-column="61" selection-end-line="93" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/yzc-blod/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.8695073">
-          <caret line="365" column="10" selection-start-line="365" selection-start-column="10" selection-end-line="365" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/yzc-blod/reg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bson/lib/bson/objectid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33247754">
@@ -729,20 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/article_header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.392857">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/KindEditor/kindeditor.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.3">
-          <caret line="1223" column="8" selection-start-line="1223" selection-start-column="8" selection-end-line="1223" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/KindEditor/themes/default/background.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -752,13 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="419" column="16" selection-start-line="419" selection-start-column="16" selection-end-line="419" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/header.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -787,13 +610,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -839,14 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/post.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-34.285713">
-          <caret line="202" column="90" selection-start-line="202" selection-start-column="69" selection-end-line="202" selection-end-column="90" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express-session/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33247754">
@@ -858,14 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33247754">
           <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/yzc-blod/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,81 +681,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1212" column="39" selection-start-line="1212" selection-start-column="30" selection-end-line="1212" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/post.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="294" column="34" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="34" />
-          <folding>
-            <element signature="e#3783#4447#0" expanded="false" />
-            <element signature="e#4493#5158#0" expanded="false" />
-            <element signature="e#5968#6724#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="581" column="23" selection-start-line="581" selection-start-column="23" selection-end-line="581" selection-end-column="23" />
-          <folding>
-            <element signature="e#8876#10010#0" expanded="false" />
-            <element signature="e#13858#13976#0" expanded="false" />
-            <element signature="e#16259#16747#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/index_blod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#10169#29563#0" expanded="false" />
-            <element signature="e#10878#19787#0" expanded="false" />
-            <element signature="e#20690#29052#0" expanded="false" />
-            <element signature="e#29625#38035#0" expanded="false" />
-            <element signature="e#46772#46947#0" expanded="false" />
-            <element signature="e#46985#47390#0" expanded="false" />
-            <element signature="e#47398#47464#0" expanded="false" />
-            <marker date="1472457426465" expanded="true" signature="3859:3873" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="6800:6814" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="7826:7839" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="8516:8530" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="9542:9555" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="12516:12530" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="16118:16132" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="17365:17378" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="18222:18236" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="19469:19482" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="22208:22222" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="25627:25641" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="26757:26770" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="27559:27573" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="28741:28754" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="31444:31458" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="34533:34547" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="35611:35624" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="36341:36355" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="37419:37432" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="40039:40053" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="43189:43203" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="44267:44280" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="45001:45015" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="46079:46092" placeholder="..." />
-            <marker date="1472457426465" expanded="true" signature="50566:50609" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -963,7 +688,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="631" column="20" selection-start-line="631" selection-start-column="20" selection-end-line="631" selection-end-column="20" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28369704">
+          <caret line="1717" column="14" selection-start-line="1717" selection-start-column="6" selection-end-line="1717" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="294" column="34" selection-start-line="294" selection-start-column="18" selection-end-line="294" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -971,23 +709,220 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/post.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="935" column="26" selection-start-line="935" selection-start-column="26" selection-end-line="935" selection-end-column="26" />
+          <folding>
+            <element signature="e#5027#5896#0" expanded="false" />
+            <element signature="e#22536#25218#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/article.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="586" column="1" selection-start-line="586" selection-start-column="1" selection-end-line="586" selection-end-column="1" />
+          <caret line="677" column="1" selection-start-line="677" selection-start-column="1" selection-end-line="677" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/post.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="202" column="49" selection-start-line="202" selection-start-column="28" selection-end-line="202" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/201411717111811.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/sprite_for_ie-cc644caf48613f506878d8876df45eff.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/sprite-1d28b1a5e9c3a6854a8c262666504212.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/footer-wechat.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/article_header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/loading.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/img_logo-25ff4bee2e56411470b83c636a7a0dad.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/hjC1k9GjMYzH3ZXatKu5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/KindEditor/kindeditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31707317">
+          <caret line="1223" column="8" selection-start-line="1223" selection-start-column="8" selection-end-line="1223" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/14-75d944a989bbbd5b92a639698c9b4a3c.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/header.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/upload.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/multer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33247754">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/blog-master1.1/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="11" selection-start-line="44" selection-start-column="11" selection-end-line="44" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/yzc-blod/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-32.785713">
+          <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/blog-master1.1/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="173" column="41" selection-start-line="173" selection-start-column="41" selection-end-line="173" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/article.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8601864">
-          <caret line="79" column="22" selection-start-line="76" selection-start-column="16" selection-end-line="79" selection-end-column="22" />
+        <state vertical-scroll-proportion="-10.068966">
+          <caret line="225" column="40" selection-start-line="225" selection-start-column="40" selection-end-line="225" selection-end-column="40" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/index_blod.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1146" column="0" selection-start-line="1146" selection-start-column="0" selection-end-line="1146" selection-end-column="0" />
+          <folding>
+            <element signature="e#11034#19943#0" expanded="false" />
+            <element signature="e#20960#29322#0" expanded="false" />
+            <element signature="e#29996#38406#0" expanded="false" />
+            <element signature="e#47975#48041#0" expanded="false" />
+            <marker date="1472632282349" expanded="true" signature="4013:4027" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="6954:6968" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="7980:7993" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="8670:8684" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="9696:9709" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="12672:12686" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="16274:16288" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="17521:17534" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="18378:18392" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="19625:19638" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="22478:22492" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="25897:25911" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="27027:27040" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="27829:27843" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="29011:29024" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="31815:31829" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="34904:34918" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="35982:35995" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="36712:36726" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="37790:37803" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="40410:40424" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="43560:43574" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="44638:44651" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="45372:45386" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="46450:46463" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="51165:51208" placeholder="..." />
+            <marker date="1472632282349" expanded="true" signature="51719:51762" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9194631">
+          <caret line="816" column="0" selection-start-line="816" selection-start-column="0" selection-end-line="816" selection-end-column="0" />
+          <folding>
+            <element signature="e#8876#10010#0" expanded="false" />
+            <element signature="e#13858#13976#0" expanded="false" />
+            <element signature="e#16260#16748#0" expanded="false" />
+            <element signature="e#20659#21063#0" expanded="false" />
+            <element signature="e#21130#21535#0" expanded="false" />
+            <element signature="e#21995#22501#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

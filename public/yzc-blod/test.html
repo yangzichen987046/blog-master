@@ -6,41 +6,54 @@
     <meta charset="UTF-8">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <!--<script type="text/javascript" src="PlaceFieldEditor.js"></script>-->
-
-    <p><label for="wheelDelta">  滚动值:</label>(IE/Opera)<input type="text" id="wheelDelta" /></p>
-    <p><label for="detail"> 滚动值:(Firefox)</label><input type="text" id="detail" /></p>
-    <script type="text/javascript">
-        var oTxt=document.getElementById("txt");
-        /***********************
-         * 函数：判断滚轮滚动方向
-         * 作者：walkingp
-         * 参数：event
-         * 返回：滚轮方向 1：向上 -1：向下
-         *************************/
-        var scrollFunc=function(e){
-            var direct=0;
-            e=e || window.event;
-
-            var t1=document.getElementById("wheelDelta");
-            var t2=document.getElementById("detail");
-            if(e.wheelDelta){//IE/Opera/Chrome
-                t1.value=e.wheelDelta;
-            }else if(e.detail){//Firefox
-                t2.value=e.detail;
-            }
-            ScrollText(direct);
+    <style>
+        .main{width:1200px;margin: 0 auto;height:1300px;position: relative;}
+        .a{ width:0px;height:1px;background: #000;position: absolute;top:0px;left:0px;}
+        .b{ width:1px;height:0px;background: #000;position: absolute;top:0px;left:200px;}
+        .c{ width:0px;height:1px;background: #000;position: absolute;top:200px;left:200px;}
+        .keya{animation: keya 1s forwards linear}
+        @keyframes keya {
+            from{width:0px;}
+            to{width:200px;}
         }
-        /*注册事件*/
-        if(document.addEventListener){
-            document.addEventListener('DOMMouseScroll',scrollFunc,false);
-        }//W3C
-        window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
+
+        .keyb{animation: keyb 1s forwards linear}
+        @keyframes keyb {
+            from{height:0px;}
+            to{height:200px;}
+        }
+        .keyc{animation: keyc 1s forwards linear}
+        @keyframes keyc {
+            from{width:0px;}
+            to{width:200px;}
+        }
+    </style>
+    <script>
+        $(function(){
+            setTimeout(function(){
+                $(".a").addClass("keya")
+                setTimeout(function(){
+                    $(".b").addClass("keyb")
+                    setTimeout(function(){
+                        $(".c").addClass("keyc")
+                    },1000)
+                },1000)
+            },0)
+        })
     </script>
 
 </head>
 <body>
+    <div class="main">
+        <div class="a">
 
+        </div>
+        <div class="b">
 
+        </div>
+        <div class="c">
 
+        </div>
+    </div>
 </body>
 </html> 

@@ -16,8 +16,15 @@ $(window).load(function(){
         $('html, body').animate({scrollTop: height}, 300);
     })
 
-})
 
+    $("#likes-count").hover(function(){
+        $(".tooltip.fade").addClass("in")
+    },function(){
+        $(".tooltip.fade").removeClass("in")
+    })
+
+
+})
 
 
 
@@ -304,7 +311,7 @@ $(function(){
 
 
 
-            if(data[0].comments.length) {
+            if(data[0].comments.length>9) {
                 $("#comment-list").append("<p class='load-more'>" +
                     "<a class='blue-link' data-type='html' data-action='load-comments' data-remote='true' >加载更多 <i class='fa fa-arrow-down'></i></a>" +
                     "</p>")
@@ -453,10 +460,11 @@ $(function(){
 
                             }
 
-
-                        $("#comment-list").append("<p class='load-more'>" +
-                            "<a class='blue-link' data-type='html' data-action='load-comments' data-remote='true' >加载更多 <i class='fa fa-arrow-down'></i></a>"+
-                            "</p>")
+                            if(data[0].comments.length>9) {
+                                $("#comment-list").append("<p class='load-more'>" +
+                                    "<a class='blue-link' data-type='html' data-action='load-comments' data-remote='true' >加载更多 <i class='fa fa-arrow-down'></i></a>" +
+                                    "</p>")
+                            }
                         }
                     }
                 })
@@ -608,10 +616,11 @@ $(function(){
 
                         }
 
-
-                            $("#comment-list").append("<p class='load-more'>" +
-                                "<a class='blue-link' data-type='html' data-action='load-comments' data-remote='true'>加载更多 <i class='fa fa-arrow-down'></i></a>" +
-                                "</p>")
+                            if(data[0].comments.length>9) {
+                                $("#comment-list").append("<p class='load-more'>" +
+                                    "<a class='blue-link' data-type='html' data-action='load-comments' data-remote='true'>加载更多 <i class='fa fa-arrow-down'></i></a>" +
+                                    "</p>")
+                            }
                         }
 
                         //console.log(JSON.stringify(data))
@@ -979,6 +988,14 @@ $(function(){
         }
 
 
+        if($(obj).closest(".modal-dialog").length <=0){//点击的区域如果没有id为explain的标签，就将explain收起隐藏
+
+            $("#likes-modal").removeClass("in")
+            $(".modal-backdrop.fade.in").remove()
+
+        }
+
+
     });
 
     //$(".note-comment .clearfix").find($(".reply")).click(function(){
@@ -1035,7 +1052,7 @@ $(function(){
         }
 
     })
-
+    /*取消修改文集*/
     $(".cancel-button").click(function(){
         $(".modal-backdrop.fade.in").remove();
         $(".rename-notebook-modal").hide();
@@ -1080,7 +1097,7 @@ $(window).load(function(){
 
 
 
-
+/*修改文集*/
     $(document).on('click','[data-action="rename-notebook"]',function(){
 
        $("body").append("<div class='modal-backdrop fade in' style='opacity: 1; background: rgb(255, 255, 255);'></div>")
@@ -1094,10 +1111,48 @@ $(window).load(function(){
         $(".input-large.notebook-input").select();
     });
 
+/*查看喜欢*/
+$(document).on('click','[data-toggle="tooltip"]',function(){
+
+    $("body").append("<div class='modal-backdrop fade in' style='opacity: 1; background: rgb(255, 255, 255);'></div>")
+    $("#likes-modal").addClass("in")
+    var url= $(".like-content").attr("data-href")
+    $.ajax({
+        type: 'POST',
+        url: "detail"+url,
+        dataType: "json",
+        success: function(data){
+            for (var i=0;i<data[0].likes.length;i++){
+                $(".unstyled.users").append("<li>"+
+                "<a class='avatar' href=''>"+
+                        "<img src='http://upload.jianshu.io/users/upload_avatars/2093398/3084e12ff8ae?imageMogr/thumbnail/90x90/quality/100'>"+
+                "</a>"+
+                "<a class='blue-link' href='/users/26b947585fb7'>"+
+                    data[0].likes[i].name+
+                "</a>"+
+                "<span class='time'>"+
+                    data[0].likes[i].time+
+                "</span>"+
+                "</li>"
+                )
+            }
+
+        }
+
+    })
 
 
+});
 
 
+    /*关闭查看喜欢*/
+$(".close").click(function(){
+    $(".modal-backdrop.fade.in").remove();
+    $("#likes-modal").removeClass("in");
+})
+
+
+    /*提交修改文集*/
     $(document).on('click','[data-action="submit-rename-notebook"]',function(){
          var notebook_name=$("#notebook_name").val();
         $.ajax({

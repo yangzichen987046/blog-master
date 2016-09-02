@@ -295,6 +295,7 @@ img{    max-width: 100%;}
     vertical-align: middle;
 }
 .meta-bottom {
+    position: relative;
     margin-bottom: 40px;
     width: 620px;
     margin-top: 0;
@@ -550,7 +551,7 @@ form {
 }
 
 .tooltip .tooltip-inner {
-    max-width: none;
+    /*max-width: none;*/
     color: white;
     white-space: nowrap;
     max-width: none;
@@ -581,37 +582,138 @@ form {
     border-radius: 4px;
 }
 .tooltip {
+    position: absolute;
+    top:8px;
+    left: 140px;
     font-size: 12.5px;
     opacity: 0.01;
     filter: alpha(opacity=1);
 }
+.tooltip.in {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+.tooltip.right {
+    margin-left: 3px;
+    padding: 0 5px;
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+}
 
+.support_list-modal.fade{
+    display: none;
+}
+.support_list-modal.fade.in{
+    display: block !important;
+    opacity: 1 !important;
+    position: fixed;
+    top: 0 !important;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    width: auto;
+    margin: 0;
+    z-index: 1050;
+}
+.modal-dialog {
+    width: 600px;
+    margin: 30px auto;
+    position: relative;
+}
+.modal-content {
+    position: relative;
+    background-clip: padding-box;
+}
+.modal-header {
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+.modal-header .close {
+    margin-top: -4px;
+}
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+}
+.close {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: black;
+    text-shadow: 0 1px 0 white;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+.modal-header h3 {
+    margin: 0;
+    line-height: 30px;
+}
+h3 {
+    font-size: 24.5px;
+}
+.support_list-modal .modal-body {
+    padding: 30px 10px;
+    max-height: none;
+}
+.modal-body {
+    position: relative;
+    overflow-y: auto;}
+ul.unstyled, ol.unstyled {
+    margin-left: 0;
+    list-style: none;
+    padding: 0px;
+    /*margin: 0 0 10px 25px;*/
+}
+.support_list-modal li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
+    text-align: left;
+    line-height: 17px;
+}
+.support_list-modal li a{
+    line-height: 32px;
+    float: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.support_list-modal .avatar {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid #d9d9d9;
+}
+.avatar {
+    border-radius: 50%;
+}
+.blue-link {
+    color: #4094c7;
+}
+.support_list-modal .time {
+    float: right;
+    margin-top: 9px;
+    color: #999999;
+    font-size: 12px;
+}
+.support_list-modal .avatar img {
+    border: none;
+}
+.avatar img {
+    width: 100%;
+    height: 100%;
+    /*border: 2px solid white;*/
+    border-radius: 50%;
+    box-sizing: border-box;
+}

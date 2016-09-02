@@ -74,10 +74,11 @@
             </div>
             <span id="likes-count" data-toggle="tooltip" data-placement="right" title="" data-original-title="查看所有喜欢的用户"><%if(post.likes){%><%= post.likes.length %><%}else{%>0<%}%></span>
 
-            <!--<div class="tooltip fade right in" style="display: block; top: 6947.5px; left: 524.406px;">-->
-                <!--<div class="tooltip-arrow"></div>-->
-                <!--<div class="tooltip-inner">查看所有喜欢的用户</div>-->
-            <!--</div>-->
+
+        </div>
+        <div class="tooltip fade right" style="">
+            <div class="tooltip-arrow"></div>
+            <div class="tooltip-inner">查看所有喜欢的用户</div>
         </div>
         <!--  share group -->
         <div class="share-group pull-right">
@@ -149,6 +150,23 @@
 
 
 
+<div id="likes-modal" class="support_list-modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>喜欢的用户</h3>
+            </div>
+            <div class="modal-body">
+                <ul class="unstyled users">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <script>
     $(document).ready(function(){
@@ -189,7 +207,13 @@
                 type: "post",
                 url: url,
                 data:{"author_name":author_name},
-
+                dataType: "json",
+                success: function(data){
+                    console.log("add_success")
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    console.log('error ' + textStatus + " " + errorThrown);
+                }
             })
         }else{
             var url=$(".like-content").attr("data-href")
@@ -198,6 +222,12 @@
                 type: "post",
                 url: "/delete"+url,
                 data:{"author_name":author_name},
+                success: function(data){
+                    console.log("delete_success")
+                },
+                error: function(jqXHR, textStatus, errorThrown){
+                    console.log('error ' + textStatus + " " + errorThrown);
+                }
 
             })
         }
