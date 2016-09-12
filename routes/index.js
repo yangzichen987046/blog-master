@@ -69,7 +69,20 @@ module.exports = function(app) {
     app.post('/reg', function (req, res) {
         var name = req.body.name,
             password = req.body.password,
-            password_re = req.body['password-repeat'];
+            password_re = req.body['password-repeat'],
+            email= req.body.email;
+        if (name==0) {
+            req.flash('error', '昵称 不能为空!');
+            return res.redirect('/reg');//返回主册页
+        }
+        if (email==0) {
+            req.flash('error', '邮箱 不能为空!');
+            return res.redirect('/reg');//返回主册页
+        }
+        if (password==0) {
+            req.flash('error', '密码 不能为空!');
+            return res.redirect('/reg');//返回主册页
+        }
         //检验用户两次输入的密码是否一致
         if (password_re != password) {
             req.flash('error', '两次输入的密码不一致!');
@@ -457,6 +470,7 @@ module.exports = function(app) {
 
     app.get('/upload', checkLogin);
     app.get('/upload', function (req, res) {
+
         res.render('upload', {
             title: '文件上传',
             user: req.session.user,
@@ -467,7 +481,17 @@ module.exports = function(app) {
 
     app.post('/upload', checkLogin);
     app.post('/upload', function (req, res) {
+        var form = new formidable.IncomingForm();
+        form.keepExtensions = true;
+        form.uploadDir =  './public/upload';
 
+        form.parse(req, function (err, fields, files) {
+            if (err) {
+                throw err;
+            }
+
+           console.log(files)
+        });
         req.flash('success', '文件上传成功!');
         res.redirect('/upload');
     });
@@ -774,6 +798,23 @@ module.exports = function(app) {
 
         });
     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1103,13 +1144,13 @@ module.exports = function(app) {
     app.get('/test', function(req, res, next) {
         res.render('test', { title: '图片上传' });
     });
+
+
     app.post('/uploadImg', function(req, res, next) {
         var form = new formidable.IncomingForm();
         form.keepExtensions = true;
         form.uploadDir =  './public/upload';
-        console.log("-----------------------------------------")
-        console.log(req)
-        console.log("----------------------------------------")
+
         form.parse(req, function (err, fields, files) {
             if (err) {
                 throw err;
@@ -1119,6 +1160,7 @@ module.exports = function(app) {
             var path = image.path;
             path = path.replace('/\\/g', '/');
             var url = '/upload' + path.substr(path.lastIndexOf('\\'), path.length);
+
             var info = {
                 "error": 0,
                 "url": url

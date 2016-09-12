@@ -46,7 +46,7 @@
 						<input type="password" name="password" id="sign_in_password" class="span2" placeholder="密码" />
 					</div>
 
-					<div id="embed-captcha"></div>
+					<div id="embed-captcha" style="position: relative;z-index: 9999;"></div>
 					<p id="wait" class="show">正在加载验证码......</p>
 					<p id="notice" class="hide">请先拖动验证码到相应位置</p>
 
@@ -106,22 +106,7 @@
 		});
 
 
-
-		$("#embed-captcha").mousemove(function(){
-			$(".gt_widget").removeClass("gt_hide").addClass("gt_show")
-		})
-
-		$("#embed-captcha").mouseleave(function(){
-			if($(".gt_slider_knob").hasClass("moving")){
-				$(".gt_widget").removeClass("gt_hide").addClass("gt_show")
-			}else {
-				setTimeout(function () {
-					$(".gt_widget").removeClass("gt_show").addClass("gt_hide")
-				}, 1000);
-			}
-		})
-
-
+		
 
 
 			// 将验证码加到id为captcha的元素里，同时会有三个input的值：geetest_challenge, geetest_validate, geetest_seccode
@@ -144,7 +129,7 @@
 			initGeetest({
 				gt: data.gt,
 				challenge: data.challenge,
-				product: "embed", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+				product: "float", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
 				offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
 				// 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
 			}, handlerEmbed);
